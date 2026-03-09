@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card mb-3 shadow-sm border-0">
+
+    <div class="card-body">
+
+        <div class="row align-items-center">
+
+           
+            <div class="col-md-8">
+
+                 
+
+                <h5 class="card-title text-primary mb-3">
+                    {{ story.title }}
+                </h5>
+
+                <p class="mb-2">
+                    <strong>Source:</strong>
+                    <span class="text-success">
+                        {{ story.source.name }}
+                    </span>
+                </p>
+
+                 <p class="mb-2">
+                    <strong>Body:</strong>
+                    <span class="text-success">
+                        {{ story.body_text }}
+                    </span>
+                </p>
+
+                <p class="mb-0">
+                    <strong>Companies:</strong>
+
+                    {% for company in story.tagged_companies.all %}
+                        <span class="badge bg-secondary me-1">
+                            {{ company.name }}
+                        </span>
+            
+
+                </p>
+
+            </div>
+
+         
+           
+
+        </div>
+
+    </div>
+
+</div>
+
+{% empty %}
+
+<div class="alert alert-info">
+    No stories available
+</div>
+
+{% endfor %}
+
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
