@@ -12,7 +12,7 @@ from .models import Story
 
 @login_required
 def story_list(request):
-    stories = Story.objects.filter(company=request.user.subscriber.company)
+    stories = Story.objects.select_related("source").prefetch_related("tagged_companies").filter(company=request.user.subscriber.company)
     return render(request, "story/story_list.html", {"stories": stories})
 
 

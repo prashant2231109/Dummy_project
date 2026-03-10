@@ -72,3 +72,9 @@ def login_view(request):
     else:
         form = LoginForm()
     return render(request, "clients/login.html", {"form": form})
+
+
+def logout_view(request):
+    logout(request)
+    messages.success(request, "Logged out successfully")
+    return redirect("login")

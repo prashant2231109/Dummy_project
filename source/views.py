@@ -22,7 +22,7 @@ def add_source(request):
 
 @login_required
 def source_list(request):
-    sources = Source.objects.filter(company=request.user.subscriber.company)
+    sources = Source.objects.select_related("company").prefetch_related("tagged_companies").filter(company=request.user.subscriber.company)
     return render(
         request, "source/source_list.html", {"sources": sources}
     )
@@ -30,7 +30,7 @@ def source_list(request):
 
 @login_required
 def source_detail(request, source_id):
-    stories = Story.objects.filter(source_id=source_id)
+    stories = Story.objects.select_related("source").prefetch_related("tagged_companies").filter(source_id=source_id)
     print(stories)
     return render(
         request, "source/source_detail.html", {"stories": stories}

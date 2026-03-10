@@ -14,7 +14,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
 
-    <a class="navbar-brand" href="#">NewsApp</a>
+    <a class="navbar-brand" href="#">NewsMonitor</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -28,11 +28,23 @@
         </li>
       </ul>
 
-      <!-- Right side buttons -->
+    {% if user.is_authenticated %}
+        <div class="d-flex align-items-center">
+      
+            <span class="text-light me-3" >
+               Hello {{ user.username }}
+            </span> 
+            <a href="{% url 'logout' %}" class="btn btn-outline-light">
+                Logout
+            </a>
+        </div>
+      
+    {% else %}
       <div class="d-flex">
         <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Login</a>
         <a href="{% url 'signup' %}" class="btn btn-warning">Signup</a>
       </div>
+    {% endif %}
 
     </div>
 
