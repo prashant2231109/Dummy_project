@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+from django.contrib.postgres.indexes import GinIndex
 from django.db import models
 from django.utils import timezone
 
@@ -31,14 +32,19 @@ class Story(models.Model):
     title = models.CharField(max_length=200, db_index=True)
     url = models.URLField(max_length=500)
     body_text = models.TextField()
- 
-  
+
     created_on = models.DateTimeField(auto_now_add=True, db_index=True)
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
         unique_together = ("url", "company")
+        indexes = [
+            GinIndex(
+                fields=["body_text"],
+                name="story_body_text_trgm_gin",
+                opclasses=["gin_trgm_ops"],
+            ),
+        ]
 
     def __str__(self):
         return f"{self.title} - {self.source.name}"
-    

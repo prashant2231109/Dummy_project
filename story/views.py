@@ -12,19 +12,22 @@ from .models import Story
 
 @login_required
 def story_list(request):
-    stories = Story.objects.select_related("source").prefetch_related("tagged_companies").filter(company=request.user.subscriber.company)
+    stories = (
+        Story.objects.select_related("source")
+        .prefetch_related("tagged_companies")
+        .filter(company=request.user.subscriber.company)
+    )
     return render(request, "story/story_list.html", {"stories": stories})
 
 
 def story_create(request):
     if request.method == "POST":
         form = StoryForm(request.POST, request=request)
-     
+
         if form.is_valid():
-            add_story(form,request.user)
+            add_story(form, request.user)
             return redirect("story:list")
-           
-        
+
     else:
         form = StoryForm(request=request)
 
@@ -40,8 +43,8 @@ def story_detail(request, story_id):
 def story_update(request, story_id):
     story = get_object_or_404(Story, id=story_id)
     if request.method == "POST":
-        form = StoryForm(request.POST, instance=story)
-        
+        form = StoryForm(request.POST, instance=story, request=request)
+
         if form.is_valid():
             story = form.save(commit=False)
             story.updated_by = request.user
@@ -50,7 +53,7 @@ def story_update(request, story_id):
             return redirect("story:list")
 
     else:
-        form = StoryForm(instance=story)
+        form = StoryForm(instance=story, request=request)
 
     return render(request, "story/story_update.html", {"form": form})
 
