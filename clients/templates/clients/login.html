@@ -2,30 +2,53 @@
 
 {% block content %}
 
-<div class="container mt-5">
-    <div class="col-md-6 offset-md-3">
+<div class="container d-flex justify-content-center align-items-center" style="min-height:80vh;">
 
-        <div class="card p-4 shadow">
-            <h3 class="text-center">Login</h3>
+```
+<div class="col-md-5">
+
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-5">
+
+            <h3 class="text-center mb-4 fw-bold">Login</h3>
 
             <form method="POST">
                 {% csrf_token %}
+
                 {{ form.as_p }}
-                {{non_field_errors}}
+                {{ form.non_field_errors }}
 
                 {% if messages %}
                     {% for message in messages %}
-                        <div class="alert alert-{{ message.tags }} mt-3">{{ message }}</div>
+                        <div class="alert alert-{{ message.tags }} mt-2">
+                            {{ message }}
+                        </div>
                     {% endfor %}
-                
-
                 {% endif %}
 
-                <button class="btn btn-primary w-100 mt-3">Login</button>
+                <button class="btn btn-primary w-100 mt-3 py-2">
+                    Login
+                </button>
             </form>
-        </div>
 
+            <hr class="my-4">
+
+            <p class="text-center mb-2">
+                Don't have an account?
+            </p>
+
+            <div class="d-grid">
+                <a href="{% url 'signup' %}" class="btn btn-outline-primary">
+                    Create Account
+                </a>
+            </div>
+
+        </div>
     </div>
+
+</div>
+```
+
 </div>
 
 {% endblock %}

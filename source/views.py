@@ -56,6 +56,16 @@ def source_update(request,source_id):
     return render(request,"source/source_update.html",{"form":form})
 
 
+def source_delete(request,source_id):
+    source = get_object_or_404(Source, id=source_id)
+    if request.method == "POST":
+        source.delete()
+        return redirect("source:list")
+    return render(request,"source/source_delete.html",{"source":source})
+    
+
+
+
 
         
 
