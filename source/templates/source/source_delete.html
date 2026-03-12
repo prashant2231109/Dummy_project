@@ -12,6 +12,7 @@
     {% csrf_token %}
     <p>Are you sure you want to delete "{{ source.name }}"?</p>
     <button type="submit">Delete</button>
+    <a href="{% url 'source:list' %}">Cancel</a>
 </form>
 
         </div>

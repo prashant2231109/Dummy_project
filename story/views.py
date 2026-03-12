@@ -1,23 +1,30 @@
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render, redirect
-from django.views.decorators.http import require_POST
 
-from clients.forms import StoryForm
-from clients.models import Company
-from source.models import Source
-from story.services import add_story
 
+
+from story.services import add_story, fetch_stories
+
+from .forms import StoryForm
 from .models import Story
 
 
 @login_required
 def story_list(request):
+    fetch_stories(request.user)
     stories = (
         Story.objects.select_related("source")
         .prefetch_related("tagged_companies")
         .filter(company=request.user.subscriber.company)
     )
-    return render(request, "story/story_list.html", {"stories": stories})
+    paginator = Paginator(stories, 25)
+    print(paginator)
+    page_number = request.GET.get("page")
+    print(page_number)
+    page_obj = paginator.get_page(page_number)
+    print(page_obj)
+    return render(request, "story/story_list.html", {"page_obj": page_obj})
 
 
 def story_create(request):

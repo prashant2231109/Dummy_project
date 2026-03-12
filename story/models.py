@@ -36,7 +36,15 @@ class Story(models.Model):
     created_on = models.DateTimeField(auto_now_add=True, db_index=True)
     updated_on = models.DateTimeField(auto_now=True)
 
+
+    def save(self,*args, **kwargs):
+        super().save(*args, **kwargs)
+
+        if self.source:
+            self.tagged_companies.set(self.source.tagged_companies.all())
+
     class Meta:
+        ordering = ["created_on"]
         unique_together = ("url", "company")
         indexes = [
             GinIndex(

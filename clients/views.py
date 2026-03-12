@@ -60,9 +60,11 @@ def login_view(request):
                 # print("User authenticated successfully")
                 # print("CSRF Token:", request.META.get("CSRF_COOKIE"))
                 messages.success(request, "Login successful")
-                if Source.objects.filter(
-                    company=request.user.subscriber.company
-                ).exists():
+                if (
+                    Source.objects.select_related("company")
+                    .filter(company=request.user.subscriber.company)
+                    .exists()
+                ):
                     return redirect("story:list")
 
                 return redirect("add_source")

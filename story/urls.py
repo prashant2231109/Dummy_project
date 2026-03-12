@@ -10,4 +10,5 @@ urlpatterns = [
     path("<int:story_id>/", views.story_detail, name="story_detail"),
     path("update/<int:story_id>/", views.story_update, name="update"),
     path("delete/<int:story_id>/", views.story_delete, name="delete"),
+  
 ]

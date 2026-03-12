@@ -27,6 +27,7 @@ class Source(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
+        ordering = ["created_on"]
         unique_together = ("url", "company")
 
     def __str__(self):

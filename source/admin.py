@@ -6,6 +6,7 @@ from source.models import Source
 
 @admin.register(Source)
 class SourceAdmin(admin.ModelAdmin):
+    ordering = ["created_on"]
     list_display = (
         "id",
         "name",
