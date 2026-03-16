@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.contrib.postgres.indexes import GinIndex
 from django.db import models
-from django.utils import timezone
+
 
 from clients.models import Company
 from source.models import Source
