@@ -27,15 +27,12 @@
     </div>
 </form>
 
-
-
-
 <div class="row text-center fw-bold border-bottom pb-2 mb-2">
     <div class="col-md-1">ID</div>
     <div class="col-md-3">Title</div>
     <div class="col-md-2">Source</div>
     <div class="col-md-3">URL</div>
-    <div class="col-md-2"> Tagged Companies</div>
+    <div class="col-md-2">Tagged Companies</div>
     <div class="col-md-1">Actions</div>
 </div>
 
@@ -76,16 +73,19 @@ Visit URL
     <a href="{% url 'story:story_detail' story.id %}" class="btn btn-sm btn-outline-info">
         View
     </a>
+
     {% if request.user.is_staff or request.user == story.created_by %}
         <a href="{% url 'story:update' story.id %}" class="btn btn-sm btn-outline-info mt-1">
             Update
         </a>
+
         <a href="{% url 'story:delete' story.id %}" class="btn btn-sm btn-outline-info mt-1">
             Delete
         </a>
     {% endif %}
 </div>
 
+</div>
 </div>
 </div>
 
@@ -97,10 +97,11 @@ No stories available
 
 {% endfor %}
 
-</div>
-
+<!-- Pagination aligned with container -->
+<div class="d-flex justify-content-center mt-4">
 <div class="pagination">
     <span class="step-links">
+
         {% if page_obj.has_previous %}
             {% if query %}
                 <a href="?page=1&q={{ query }}">&laquo; first</a>
@@ -124,7 +125,10 @@ No stories available
                 <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
             {% endif %}
         {% endif %}
+
     </span>
 </div>
+</div>
 
+</div>
 {% endblock %}

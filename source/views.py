@@ -25,7 +25,6 @@ class CompanyAutocomplete(autocomplete.Select2QuerySetView):
 
 
 @login_required
-@cache_page(60 * 5)
 def source_list(request):
     sources = Source.objects.select_related("company").prefetch_related(
         "tagged_companies"

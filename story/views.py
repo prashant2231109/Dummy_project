@@ -1,11 +1,12 @@
+from urllib import request
+
 from dal import autocomplete
 from django.contrib.auth.decorators import login_required
+from django.core.cache import cache
 from django.contrib import messages
 from django.db.models import Q
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render, redirect
-from django.views.decorators.cache import cache_page
-from django.views.decorators.vary import vary_on_cookie
 
 from clients.models import Company
 from story.services import add_story, fetch_stories
@@ -25,21 +26,31 @@ class CompanyAutocomplete(autocomplete.Select2QuerySetView):
 
 
 @login_required
-@cache_page(60 * 5)
 def story_list(request):
     fetch_stories(request.user)
-    print(request.user.subscriber.company)
-    stories = Story.objects.select_related("source").prefetch_related(
-        "tagged_companies"
-    )
-    if not request.user.is_staff:
-        stories = stories.filter(company=request.user.subscriber.company)
 
-    paginator = Paginator(stories, 25)
+    page_number = request.GET.get("page", 1)
 
-    page_number = request.GET.get("page")
+    if request.user.is_staff:
+        cache_key = f"stories_staff_page_{page_number}"
+    else:
+        company_id = request.user.subscriber.company.id
+        cache_key = f"stories_company_{company_id}_page_{page_number}"
 
-    page_obj = paginator.get_page(page_number)
+    page_obj = cache.get(cache_key)
+
+    if not page_obj:
+        stories = Story.objects.select_related("source").prefetch_related(
+            "tagged_companies"
+        )
+
+        if not request.user.is_staff:
+            stories = stories.filter(company=request.user.subscriber.company)
+
+        paginator = Paginator(stories, 25)
+        page_obj = paginator.get_page(page_number)
+
+        cache.set(cache_key, page_obj, 60 * 5)
 
     return render(request, "story/story_list.html", {"page_obj": page_obj})
 
