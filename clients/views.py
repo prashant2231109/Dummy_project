@@ -1,5 +1,4 @@
 from django.contrib.auth import login, authenticate, logout
-from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -7,7 +6,7 @@ from django.contrib.auth.models import User
 from source.models import Source
 
 from .forms import LoginForm, SignupForm
-from .models import Company, Subscriber
+from .models import Subscriber
 
 
 def signup_view(request):
@@ -15,14 +14,6 @@ def signup_view(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data
-            print(data)
-            if User.objects.filter(username=data["username"]).exists():
-                messages.error(request, "Username already exists")
-                return render(request, "clients/signup.html", {"form": form})
-
-            if data["password"] != data["confirm_password"]:
-                messages.error(request, "Passwords do not match")
-                return render(request, "clients/signup.html", {"form": form})
 
             user = User.objects.create_user(
                 username=data["username"],
@@ -31,7 +22,6 @@ def signup_view(request):
                 last_name=data["last_name"],
                 email=data["email"],
             )
-            messages.success(request, "Signup successful")
 
             company = data["company"]
 
@@ -44,11 +34,10 @@ def signup_view(request):
 
 
 def login_view(request):
-    print(request)
+
     if request.method == "POST":
         form = LoginForm(request.POST)
-        print(request.POST)
-        print(request.user)
+
         if form.is_valid():
             username = form.cleaned_data["username"]
             password = form.cleaned_data["password"]
@@ -56,10 +45,7 @@ def login_view(request):
 
             if user is not None:
                 login(request, user)
-                # print("CSRF Token:", request.META.get("SESSION_COOKIE"))
-                # print("User authenticated successfully")
-                # print("CSRF Token:", request.META.get("CSRF_COOKIE"))
-                messages.success(request, "Login successful")
+
                 if (
                     Source.objects.select_related("company")
                     .filter(company=request.user.subscriber.company)
@@ -67,7 +53,7 @@ def login_view(request):
                 ):
                     return redirect("story:list")
 
-                return redirect("add_source")
+                return redirect("source:add")
 
             else:
                 messages.error(request, "Invalid username or password")

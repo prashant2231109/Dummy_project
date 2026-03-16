@@ -10,6 +10,14 @@
 
             <form method="post">
     {% csrf_token %}
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }} mt-3">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
     <p>Are you sure you want to delete "{{ story.title }}"?</p>
     <button type="submit">Delete</button>
     <a href="{% url 'story:list' %}">Cancel</a>

@@ -4,7 +4,10 @@
 <div class="container mt-5">
 
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2>All Stories</h2>
+    
+      <a href="{% url 'story:list' %}" class="btn btn-primary">
+     All Stories
+    </a>
 
     <a href="{% url 'story:create' %}" class="btn btn-primary">
         + Add Story
@@ -15,8 +18,19 @@
     </a>
 </div>
 
+<form class="mb-4" method="get" action="{% url 'story:search' %}">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search stories..." 
+        name="q" 
+        value="{{ query|default:'' }}">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+    </div>
+</form>
 
-<div class="row text-center fw-bold border-bottom pb-2 mb-3">
+
+
+
+<div class="row text-center fw-bold border-bottom pb-2 mb-2">
     <div class="col-md-1">ID</div>
     <div class="col-md-3">Title</div>
     <div class="col-md-2">Source</div>
@@ -59,17 +73,17 @@ Visit URL
 </div>
 
 <div class="col-md-1">
-<a href="{% url 'story:story_detail' story.id %}" class="btn btn-sm btn-outline-info">
-View
-</a>
-<a href="{% url 'story:update' story.id %}" class="btn btn-sm btn-outline-info">
-Update
-</a>
-<a href="{% url 'story:delete' story.id %}" class="btn btn-sm btn-outline-info">
-Delete
-</a>
-</div>
-
+    <a href="{% url 'story:story_detail' story.id %}" class="btn btn-sm btn-outline-info">
+        View
+    </a>
+    {% if request.user.is_staff or request.user == story.created_by %}
+        <a href="{% url 'story:update' story.id %}" class="btn btn-sm btn-outline-info mt-1">
+            Update
+        </a>
+        <a href="{% url 'story:delete' story.id %}" class="btn btn-sm btn-outline-info mt-1">
+            Delete
+        </a>
+    {% endif %}
 </div>
 
 </div>
@@ -88,8 +102,13 @@ No stories available
 <div class="pagination">
     <span class="step-links">
         {% if page_obj.has_previous %}
-            <a href="?page=1">&laquo; first</a>
-            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% if query %}
+                <a href="?page=1&q={{ query }}">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}&q={{ query }}">previous</a>
+            {% else %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
         {% endif %}
 
         <span class="current">
@@ -97,8 +116,13 @@ No stories available
         </span>
 
         {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">next</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% if query %}
+                <a href="?page={{ page_obj.next_page_number }}&q={{ query }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}&q={{ query }}">last &raquo;</a>
+            {% else %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
         {% endif %}
     </span>
 </div>

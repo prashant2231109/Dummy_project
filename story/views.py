@@ -1,59 +1,112 @@
+from dal import autocomplete
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from django.db.models import Q
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render, redirect
+from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_cookie
 
-
-
+from clients.models import Company
 from story.services import add_story, fetch_stories
+from story.forms import StoryForm
+from story.models import Story
 
-from .forms import StoryForm
-from .models import Story
+
+class CompanyAutocomplete(autocomplete.Select2QuerySetView):
+    def get_queryset(self):
+        if not self.request.user.is_authenticated:
+            return Company.objects.none()
+
+        if self.q:
+            queryset = Company.objects.filter(name__icontains=self.q)[:10]
+
+        return queryset
 
 
 @login_required
+@cache_page(60 * 5)
 def story_list(request):
     fetch_stories(request.user)
-    stories = (
-        Story.objects.select_related("source")
-        .prefetch_related("tagged_companies")
-        .filter(company=request.user.subscriber.company)
+    print(request.user.subscriber.company)
+    stories = Story.objects.select_related("source").prefetch_related(
+        "tagged_companies"
     )
+    if not request.user.is_staff:
+        stories = stories.filter(company=request.user.subscriber.company)
+
     paginator = Paginator(stories, 25)
-    print(paginator)
+
     page_number = request.GET.get("page")
-    print(page_number)
+
     page_obj = paginator.get_page(page_number)
-    print(page_obj)
+
     return render(request, "story/story_list.html", {"page_obj": page_obj})
 
 
-def story_create(request):
-    if request.method == "POST":
-        form = StoryForm(request.POST, request=request)
-
-        if form.is_valid():
-            add_story(form, request.user)
-            return redirect("story:list")
+@login_required
+def story_search(request):
+    query = request.GET.get("q", "")
+    stories = Story.objects.select_related("source").prefetch_related(
+        "tagged_companies"
+    )
+    if not request.user.is_staff:
+        stories = stories.filter(
+            Q(title__icontains=query)
+            | Q(body_text__icontains=query)
+            | Q(source__name__icontains=query),
+            company=request.user.subscriber.company,
+        )
 
     else:
-        form = StoryForm(request=request)
+        stories = stories.filter(
+            Q(title__icontains=query)
+            | Q(body_text__icontains=query)
+            | Q(source__name__icontains=query),
+        )
+    paginator = Paginator(stories, 25)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+    return render(
+        request,
+        "story/story_list.html",
+        {"page_obj": page_obj, "query": query},
+    )
 
-    return render(request, "story/story_create.html", {"form": form})
 
-
+@login_required
 def story_detail(request, story_id):
-    story = Story.objects.get(id=story_id)
+    story = get_object_or_404(
+        Story,
+        id=story_id,
+    )
 
     return render(request, "story/story_detail.html", {"story": story})
 
 
-def story_update(request, story_id):
-    story = get_object_or_404(Story, id=story_id)
+@login_required
+def story_form(request, story_id=None):
+    if story_id:
+        story = get_object_or_404(
+            Story,
+            id=story_id,
+        )
+
+        if not request.user.is_staff and story.created_by != request.user:
+            messages.error(request, "You are not allowed to edit this story.")
+            return redirect("story:list")
+    else:
+        story = None
+
     if request.method == "POST":
         form = StoryForm(request.POST, instance=story, request=request)
 
         if form.is_valid():
             story = form.save(commit=False)
+            story.company = request.user.subscriber.company
+            if story.pk is None:
+                story.created_by = request.user
+
             story.updated_by = request.user
             story.save()
             form.save_m2m()
@@ -62,11 +115,19 @@ def story_update(request, story_id):
     else:
         form = StoryForm(instance=story, request=request)
 
-    return render(request, "story/story_update.html", {"form": form})
+    return render(request, "story/story_form.html", {"form": form})
 
 
+@login_required
 def story_delete(request, story_id):
-    story = get_object_or_404(Story, id=story_id)
+    story = get_object_or_404(
+        Story,
+        id=story_id,
+    )
+    if not request.user.is_staff and story.created_by != request.user:
+        messages.error(request, "You are not allowed to delete this story.")
+        return redirect("story:list")
+
     if request.method == "POST":
         story.delete()
         return redirect("story:list")

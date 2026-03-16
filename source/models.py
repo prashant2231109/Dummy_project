@@ -20,14 +20,13 @@ class Source(models.Model):
         User, on_delete=models.CASCADE, related_name="source_updated"
     )
 
-    name = models.CharField(max_length=100, db_index=True)
-    url = models.URLField(max_length=500)
+    name = models.CharField(max_length=500, db_index=True)
+    url = models.URLField(max_length=1000)
 
     created_on = models.DateTimeField(auto_now_add=True, db_index=True)
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ["created_on"]
         unique_together = ("url", "company")
 
     def __str__(self):

@@ -20,9 +20,16 @@
     </div>
 </div>
 
+<form method="get" action="{% url 'source:search' %}" class="mb-4">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search sources..." name="q" value="{{ query|default:'' }}">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+    </div>
+</form>
 
 
-{% for source in sources %}
+
+{% for source in page_obj %}
 
 
 <div class="card mb-3 shadow-sm border-0">
@@ -37,6 +44,7 @@
     <div class="col-md-2 text-primary fw-semibold">
         {{ source.name }}
     </div>
+  
 
     <div class="col-md-2">
         <a href="{{ source.url }}" target="_blank" class="text-decoration-none">
@@ -60,17 +68,21 @@
         </a>
     </div>
 
-    <div class="col-md-1">
-        <a href="{% url 'source:update' source.id %}" class="btn btn-warning btn-sm">
-            Update
-        </a>
-    </div>
+   {% if request.user.is_staff or request.user == source.created_by %}
+<div class="col-md-1">
+    <a href="{% url 'source:update' source.id %}" class="btn btn-warning btn-sm">
+        Update
+    </a>
+</div>
+{% endif %}
 
-    <div class="col-md-1">
-        <a href="{% url 'source:delete' source.id %}" class="btn btn-danger btn-sm">
-            Delete
-        </a>
-    </div>
+   {% if request.user.is_staff or request.user == source.created_by %}
+<div class="col-md-1">
+    <a href="{% url 'source:delete' source.id %}" class="btn btn-danger btn-sm">
+        Delete
+    </a>
+</div>
+{% endif %}
 
 </div>
 
@@ -83,10 +95,41 @@
     No sources available
 </div>
 
+
+
 {% endfor %}
 
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            {% if query %}
+                <a href="?page=1&q={{ query }}">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}&q={{ query }}">previous</a>
+            {% else %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            {% if query %}
+                <a href="?page={{ page_obj.next_page_number }}&q={{ query }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}&q={{ query }}">last &raquo;</a>
+            {% else %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        {% endif %}
+    </span>
 </div>
 
 
+
 {% endblock %}
+
+
 

@@ -1,6 +1,7 @@
 from django.core.exceptions import ValidationError
 from django import forms
 
+from dal import autocomplete
 from source.models import Source
 
 
@@ -8,6 +9,11 @@ class SourceForm(forms.ModelForm):
     class Meta:
         model = Source
         fields = ["name", "url", "tagged_companies"]
+        widgets = {
+            "tagged_companies": autocomplete.ModelSelect2Multiple(
+                url="story:company-autocomplete"
+            ),
+        }
 
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop("request", None)

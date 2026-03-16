@@ -7,8 +7,3 @@ def create_source(form, user):
     form.save_m2m()
 
     return source
-
-
-
-
-

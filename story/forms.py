@@ -1,6 +1,6 @@
-from django.core.exceptions import ValidationError
 from django import forms
-
+from django.core.exceptions import ValidationError
+from dal import autocomplete
 
 from story.models import Story
 
@@ -9,6 +9,11 @@ class StoryForm(forms.ModelForm):
     class Meta:
         model = Story
         fields = ["title", "url", "source", "body_text", "tagged_companies"]
+        widgets = {
+            "tagged_companies": autocomplete.ModelSelect2Multiple(
+                url="story:company-autocomplete"
+            ),
+        }
 
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop("request", None)

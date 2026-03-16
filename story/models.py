@@ -29,8 +29,8 @@ class Story(models.Model):
         User, on_delete=models.CASCADE, related_name="story_updated"
     )
 
-    title = models.CharField(max_length=200, db_index=True)
-    url = models.URLField(max_length=500)
+    title = models.CharField(max_length=500, db_index=True)
+    url = models.URLField(max_length=1000)
     body_text = models.TextField()
 
     created_on = models.DateTimeField(auto_now_add=True, db_index=True)
