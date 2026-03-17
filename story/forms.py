@@ -10,8 +10,9 @@ class StoryForm(forms.ModelForm):
         model = Story
         fields = ["title", "url", "source", "body_text", "tagged_companies"]
         widgets = {
+            "source": autocomplete.ModelSelect2(url="story:search"),
             "tagged_companies": autocomplete.ModelSelect2Multiple(
-                url="story:company-autocomplete"
+                url="company:search"
             ),
         }
 

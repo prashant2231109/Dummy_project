@@ -1,9 +1,9 @@
+import feedparser
+
 from django.shortcuts import render
 
 from source.models import Source
 from story.models import Story
-from pprint import pprint
-import feedparser
 
 
 def add_story(form, user):
@@ -18,21 +18,30 @@ def add_story(form, user):
 
 
 def fetch_stories(user):
+    """
+    fetch stories from rss for all sources of the company of user and create story
+    """
     company = user.subscriber.company
-    sources = Source.objects.select_related("company").filter(company=company)
 
-    Stories = []
+    sources = Source.objects.filter(company=company).select_related("company")
+
+    stories = []
 
     for source in sources:
-
-        feed = feedparser.parse(source.url)
+        try:
+            feed = feedparser.parse(source.url)
+        except Exception:
+            continue
 
         for entry in feed.entries:
-            title = entry.get("title")
+            title = entry.get("title", "")
             link = entry.get("link")
             summary = entry.get("summary", "")
 
-            Stories.append(
+            if not link:
+                continue
+
+            stories.append(
                 Story(
                     url=link,
                     company=company,
@@ -41,7 +50,9 @@ def fetch_stories(user):
                     body_text=summary,
                     created_by=user,
                     updated_by=user,
+                    
                 )
             )
 
-    Story.objects.bulk_create(Stories, ignore_conflicts=True)
+    if stories:
+        Story.objects.bulk_create(stories, ignore_conflicts=True)

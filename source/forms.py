@@ -1,3 +1,5 @@
+import feedparser
+
 from django.core.exceptions import ValidationError
 from django import forms
 
@@ -11,13 +13,23 @@ class SourceForm(forms.ModelForm):
         fields = ["name", "url", "tagged_companies"]
         widgets = {
             "tagged_companies": autocomplete.ModelSelect2Multiple(
-                url="story:company-autocomplete"
+                url="company:search"
             ),
         }
 
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop("request", None)
         super().__init__(*args, **kwargs)
+
+    def clean_url(self):
+        url = self.cleaned_data["url"]
+
+        feed = feedparser.parse(url)
+
+        if feed.bozo or not feed.entries:
+            raise forms.ValidationError("Invalid RSS feed URL")
+
+        return url    
 
     def clean(self):
         cleaned_data = super().clean()

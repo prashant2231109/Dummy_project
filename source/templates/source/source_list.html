@@ -20,12 +20,66 @@
     </div>
 </div>
 
-<form method="get" action="{% url 'source:search' %}" class="mb-4">
+<form method="get" action="{% url 'source:list' %}" class="mb-4">
     <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search sources..." name="q" value="{{ query|default:'' }}">
+        <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Search sources..." 
+            name="q" 
+            value="{{ query|default:'' }}"
+        >
         <button class="btn btn-outline-primary" type="submit">Search</button>
     </div>
 </form>
+
+{% if stories %}
+<div class="mt-4">
+    <h3 class="mb-3">Stories from Selected Source</h3>
+    <a href="{% url 'source:list' %}" class="btn btn-secondary btn-sm mb-3">Back To Source</a>
+    
+    <div class="row text-center fw-bold border-bottom pb-2 mb-2">
+        <div class="col-md-2">ID</div>
+        <div class="col-md-3">Title</div>
+        <div class="col-md-3">URL</div>
+        <div class="col-md-2">Source</div>
+        <div class="col-md-2">Action</div>
+    </div>
+
+    {% for story in stories %}
+    <div class="card mb-3 shadow-sm border-0">
+        <div class="card-body">
+            <div class="row align-items-center text-center">
+                <div class="col-md-2">
+                    <strong>{{ story.id }}</strong>
+                </div>
+                <div class="col-md-3 text-primary">
+                    <strong>{{ story.title|truncatewords:10 }}</strong>
+                </div>
+                <div class="col-md-3">
+                    <a href="{{ story.url }}" target="_blank" class="text-decoration-none">
+                        Visit
+                    </a>
+                </div>
+                <div class="col-md-2 text-success">
+                    {{ story.source.name }}
+                </div>
+                <div class="col-md-2">
+                    <a href="{% url 'story:story_detail' story.id %}" class="btn btn-sm btn-outline-info">
+                        View
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% else %}
+
+
+
+
 
 
 
@@ -63,7 +117,7 @@
     </div>
 
     <div class="col-md-2">
-        <a href="{% url 'source:detail' source.id %}" class="btn btn-primary btn-sm">
+        <a href="?source_id={{ source.id }}" class="btn btn-primary btn-sm">
             View Stories
         </a>
     </div>
@@ -76,7 +130,7 @@
 </div>
 {% endif %}
 
-   {% if request.user.is_staff or request.user == source.created_by %}
+{% if request.user.is_staff or request.user == source.created_by %}
 <div class="col-md-1">
     <a href="{% url 'source:delete' source.id %}" class="btn btn-danger btn-sm">
         Delete
@@ -126,6 +180,8 @@
         {% endif %}
     </span>
 </div>
+
+{% endif %}
 
 
 

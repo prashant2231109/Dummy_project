@@ -3,6 +3,56 @@
 {% block content %}
 <div class="container mt-5">
 
+
+
+{% if story %}
+
+<div class="mb-4">
+    <a href="{% url 'story:list' %}" class="btn btn-secondary">Back To Stories</a>
+</div>
+
+<div class="card shadow-lg p-4">
+    <div class="row">
+        <div class="col-md-8">
+            <h2 class="fw-bold text-primary mb-3">{{ story.title }}</h2>
+            
+            <div class="mb-3">
+                <strong>Source:</strong> 
+                <a href="{{ story.source.url }}" target="_blank" class="text-success">{{ story.source.name }}</a>
+            </div>
+
+            <div class="mb-3">
+                <strong>Story URL:</strong><br>
+                <a href="{{ story.url }}" target="_blank" class="text-decoration-none">{{ story.url }}</a>
+            </div>
+
+            <div class="mb-3">
+                <strong>Description:</strong><br>
+                <p class="mt-2">{{ story.body_text }}</p>
+            </div>
+
+            <div class="mb-3">
+                <strong>Tagged Companies:</strong><br>
+                {% for company in story.tagged_companies.all %}
+                    <span class="badge bg-secondary me-2">{{ company.name }}</span>
+                {% empty %}
+                    <span class="text-muted">No tags</span>
+                {% endfor %}
+            </div>
+
+            <div class="mb-3">
+                <strong>Created By:</strong> {{ story.created_by.username }}<br>
+                <strong>Created On:</strong> {{ story.created_on }}<br>
+                <strong>Updated On:</strong> {{ story.updated_on }}
+            </div>
+        </div>
+
+     
+    </div>
+</div>
+
+{% else %}
+
 <div class="d-flex justify-content-between align-items-center mb-4">
     
       <a href="{% url 'story:list' %}" class="btn btn-primary">
@@ -18,14 +68,25 @@
     </a>
 </div>
 
-<form class="mb-4" method="get" action="{% url 'story:search' %}">
+<form class="mb-4 position-relative" method="get" action="{% url 'story:list' %}">
     <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search stories..." 
-        name="q" 
-        value="{{ query|default:'' }}">
+        <input 
+            type="text" 
+            id="page-search"
+            class="form-control" 
+            placeholder="Search stories..." 
+            name="q" 
+            value="{{ query|default:'' }}"
+            autocomplete="off"
+        >
         <button class="btn btn-outline-primary" type="submit">Search</button>
     </div>
+
+ 
+    <ul id="page-suggestions" class="list-group"></ul>
 </form>
+
+
 
 <div class="row text-center fw-bold border-bottom pb-2 mb-2">
     <div class="col-md-1">ID</div>
@@ -36,7 +97,7 @@
     <div class="col-md-1">Actions</div>
 </div>
 
-{% for story in page_obj %}
+{% for story_item in page_obj %}
 
 <div class="card mb-3 shadow-sm border-0">
 <div class="card-body">
@@ -44,25 +105,25 @@
 <div class="row align-items-center text-center">
 
 <div class="col-md-1">
-<strong>{{ story.id }}</strong>
+<strong>{{ story_item.id }}</strong>
 </div>
 
 <div class="col-md-3 text-primary">
-{{ story.title }}
+{{ story_item.title }}
 </div>
 
 <div class="col-md-2 text-success">
-{{ story.source.name }}
+{{ story_item.source.name }}
 </div>
 
 <div class="col-md-3">
-<a href="{{ story.url }}" target="_blank" class="text-decoration-none">
+<a href="{{ story_item.url }}" target="_blank" class="text-decoration-none">
 Visit URL
 </a>
 </div>
 
 <div class="col-md-2">
-{% for company in story.tagged_companies.all %}
+{% for company in story_item.tagged_companies.all %}
 <span class="badge bg-secondary me-1">
 {{ company.name }}
 </span>
@@ -70,19 +131,21 @@ Visit URL
 </div>
 
 <div class="col-md-1">
-    <a href="{% url 'story:story_detail' story.id %}" class="btn btn-sm btn-outline-info">
+    <a href="?story_id={{ story_item.id }}" class="btn btn-sm btn-outline-info">
         View
     </a>
 
-    {% if request.user.is_staff or request.user == story.created_by %}
-        <a href="{% url 'story:update' story.id %}" class="btn btn-sm btn-outline-info mt-1">
-            Update
-        </a>
+ {% if request.user.is_staff or request.user == story_item.created_by %}
+    <a href="{% url 'story:update' story_item.id %}" class="btn btn-sm btn-outline-info mt-1">
+        Update
+    </a>
+{% endif %}
 
-        <a href="{% url 'story:delete' story.id %}" class="btn btn-sm btn-outline-info mt-1">
-            Delete
-        </a>
-    {% endif %}
+{% if request.user.is_staff or request.user == story_item.created_by %}
+    <a href="{% url 'story:delete' story_item.id %}" class="btn btn-sm btn-outline-info mt-1">
+        Delete
+    </a>
+{% endif %}
 </div>
 
 </div>
@@ -130,5 +193,8 @@ No stories available
 </div>
 </div>
 
+{% endif %}
+
 </div>
 {% endblock %}
+

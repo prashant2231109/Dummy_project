@@ -1,6 +1,5 @@
-from urllib import request
-
 from dal import autocomplete
+
 from django.contrib.auth.decorators import login_required
 from django.core.cache import cache
 from django.contrib import messages
@@ -8,95 +7,62 @@ from django.db.models import Q
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render, redirect
 
-from clients.models import Company
-from story.services import add_story, fetch_stories
+
 from story.forms import StoryForm
 from story.models import Story
+from source.models import Source
 
 
-class CompanyAutocomplete(autocomplete.Select2QuerySetView):
-    def get_queryset(self):
-        if not self.request.user.is_authenticated:
-            return Company.objects.none()
+# @
 
-        if self.q:
-            queryset = Company.objects.filter(name__icontains=self.q)[:10]
-
-        return queryset
+from django.core.paginator import Paginator
+from django.db.models import Q
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 
 @login_required
-def story_list(request):
-    fetch_stories(request.user)
-
+def fetch_stories(request):
     page_number = request.GET.get("page", 1)
-
-    if request.user.is_staff:
-        cache_key = f"stories_staff_page_{page_number}"
-    else:
-        company_id = request.user.subscriber.company.id
-        cache_key = f"stories_company_{company_id}_page_{page_number}"
-
-    page_obj = cache.get(cache_key)
-
-    if not page_obj:
-        stories = Story.objects.select_related("source").prefetch_related(
-            "tagged_companies"
-        )
-
-        if not request.user.is_staff:
-            stories = stories.filter(company=request.user.subscriber.company)
-
-        paginator = Paginator(stories, 25)
-        page_obj = paginator.get_page(page_number)
-
-        cache.set(cache_key, page_obj, 60 * 5)
-
-    return render(request, "story/story_list.html", {"page_obj": page_obj})
-
-
-@login_required
-def story_search(request):
     query = request.GET.get("q", "")
-    stories = Story.objects.select_related("source").prefetch_related(
-        "tagged_companies"
-    )
-    if not request.user.is_staff:
-        stories = stories.filter(
-            Q(title__icontains=query)
-            | Q(body_text__icontains=query)
-            | Q(source__name__icontains=query),
-            company=request.user.subscriber.company,
-        )
+    story_id = request.GET.get("story_id")
 
-    else:
-        stories = stories.filter(
+    stories = Story.objects.select_related(
+        "source",
+        "created_by",
+        "updated_by",
+    ).prefetch_related("tagged_companies")
+
+    if not request.user.is_staff:
+        stories = stories.filter(company=request.user.subscriber.company)
+
+    if query:
+        search_filter = (
             Q(title__icontains=query)
             | Q(body_text__icontains=query)
-            | Q(source__name__icontains=query),
+            | Q(source__name__icontains=query)
         )
+        stories = stories.filter(search_filter)
+
+    story = None
+    if story_id:
+        story = Story.objects.get(id=story_id)
+
     paginator = Paginator(stories, 25)
-    page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
+
     return render(
         request,
         "story/story_list.html",
-        {"page_obj": page_obj, "query": query},
+        {"page_obj": page_obj, "query": query, "story": story},
     )
 
 
 @login_required
-def story_detail(request, story_id):
-    story = get_object_or_404(
-        Story,
-        id=story_id,
-    )
-
-    return render(request, "story/story_detail.html", {"story": story})
-
-
-@login_required
-def story_form(request, story_id=None):
+def create_or_update(request, story_id=None):
+    """
+    story creation and updation
+    """
     if story_id:
         story = get_object_or_404(
             Story,
@@ -126,11 +92,15 @@ def story_form(request, story_id=None):
     else:
         form = StoryForm(instance=story, request=request)
 
-    return render(request, "story/story_form.html", {"form": form})
+    return render(request, "story/story_add.html", {"form": form})
 
 
 @login_required
-def story_delete(request, story_id):
+def delete(request, story_id):
+    """
+    story delete by staff user and created_by user
+
+    """
     story = get_object_or_404(
         Story,
         id=story_id,
@@ -144,3 +114,12 @@ def story_delete(request, story_id):
         return redirect("story:list")
 
     return render(request, "story/story_delete.html", {"story": story})
+
+
+class SourceAutocomplete(autocomplete.Select2QuerySetView):
+    def get_queryset(self):
+        queryset = Source.objects.only("id", "name")
+        if self.q:
+            queryset = queryset.filter(name__istartswith=self.q)
+
+        return queryset[:10]
