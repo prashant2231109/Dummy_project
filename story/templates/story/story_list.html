@@ -5,7 +5,49 @@
 
 
 
+<div class="d-flex justify-content-between align-items-center mb-4">
+    
+      <a href="{% url 'story:list' %}" class="btn btn-primary">
+     All Stories
+    </a>
 
+    <a href="{% url 'story:create' %}" class="btn btn-primary">
+        + Add Story
+    </a>
+
+    <a href="{% url 'source:list' %}" class="btn btn-primary">
+        Back To Source
+    </a>
+</div>
+
+<form class="mb-4 position-relative" method="get" action="{% url 'story:list' %}">
+    <div class="input-group">
+        <input 
+            type="text" 
+            id="page-search"
+            class="form-control" 
+            placeholder="Search stories..." 
+            name="q" 
+            value="{{ query|default:'' }}"
+            autocomplete="off"
+        >
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+    </div>
+
+ 
+    <ul id="page-suggestions" class="list-group"></ul>
+</form>
+
+
+
+<div class="row text-center fw-bold border-bottom pb-2 mb-2">
+    <div class="col-md-1">ID</div>
+    <div class="col-md-3">Title</div>
+    <div class="col-md-2">Source</div>
+    <div class="col-md-3">URL</div>
+    <div class="col-md-2">Tagged Companies</div>
+    <div class="col-md-1">Actions</div>
+</div>
 
 {% for story_item in page_obj %}
 
@@ -41,7 +83,9 @@ Visit URL
 </div>
 
 <div class="col-md-1">
-    
+    <a href="?story_id={{ story_item.id }}" class="btn btn-sm btn-outline-info">
+        View
+    </a>
 
  {% if request.user.is_staff or request.user == story_item.created_by %}
     <a href="{% url 'story:update' story_item.id %}" class="btn btn-sm btn-outline-info mt-1">
@@ -100,7 +144,6 @@ No stories available
     </span>
 </div>
 </div>
-
 
 
 </div>
