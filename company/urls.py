@@ -7,6 +7,5 @@ from company import views
 
 urlpatterns = [
    path("add/", views.add, name="add"),
-   path("search", views.CompanyAutocomplete.as_view(), 
-    name="search"),
+   path("search", views.CompanyAutocomplete.as_view(), name="search"),
 ]

@@ -4,7 +4,7 @@ venv/
 env/
 db.sqlite3
 .env
-media/
+media/py
 static/
 logs/
 *.log

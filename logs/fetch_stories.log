@@ -12968,3 +12968,1574 @@ SyntaxError: invalid syntax. Perhaps you forgot a comma?
 [2026-03-17 16:40:28.792876] Fetched stories for 4 subscribers.
 [2026-03-17 16:40:28.793749] Fetched stories for 5 subscribers.
 [2026-03-17 16:41:00.462613] Fetched stories for 6 subscribers.
+[2026-03-17 16:41:47.303218] Fetched stories for 1 subscribers.
+[2026-03-17 16:41:47.570997] Fetched stories for 2 subscribers.
+[2026-03-17 16:41:47.812431] Fetched stories for 3 subscribers.
+[2026-03-17 16:41:47.814332] Fetched stories for 4 subscribers.
+[2026-03-17 16:41:47.815304] Fetched stories for 5 subscribers.
+[2026-03-17 16:42:29.803457] Fetched stories for 6 subscribers.
+[2026-03-17 16:42:48.840702] Fetched stories for 1 subscribers.
+[2026-03-17 16:42:49.124114] Fetched stories for 2 subscribers.
+[2026-03-17 16:42:49.383311] Fetched stories for 3 subscribers.
+[2026-03-17 16:42:49.384421] Fetched stories for 4 subscribers.
+[2026-03-17 16:42:49.385239] Fetched stories for 5 subscribers.
+[2026-03-17 16:43:35.537934] Fetched stories for 6 subscribers.
+[2026-03-17 16:43:49.433764] Fetched stories for 1 subscribers.
+[2026-03-17 16:43:49.598081] Fetched stories for 2 subscribers.
+[2026-03-17 16:43:49.855711] Fetched stories for 3 subscribers.
+[2026-03-17 16:43:49.856809] Fetched stories for 4 subscribers.
+[2026-03-17 16:43:49.857589] Fetched stories for 5 subscribers.
+[2026-03-17 16:43:56.197593] Fetched stories for 6 subscribers.
+[2026-03-18 04:15:31.691699] Fetched stories for 1 subscribers.
+[2026-03-18 04:15:31.710735] Fetched stories for 2 subscribers.
+[2026-03-18 04:15:31.730040] Fetched stories for 3 subscribers.
+[2026-03-18 04:15:31.730822] Fetched stories for 4 subscribers.
+[2026-03-18 04:15:31.731496] Fetched stories for 5 subscribers.
+[2026-03-18 04:15:31.892186] Fetched stories for 6 subscribers.
+[2026-03-18 04:16:05.326889] Fetched stories for 1 subscribers.
+[2026-03-18 04:16:05.631202] Fetched stories for 2 subscribers.
+[2026-03-18 04:16:05.884797] Fetched stories for 3 subscribers.
+[2026-03-18 04:16:05.885958] Fetched stories for 4 subscribers.
+[2026-03-18 04:16:05.886680] Fetched stories for 5 subscribers.
+[2026-03-18 04:16:07.494163] Fetched stories for 6 subscribers.
+[2026-03-18 04:17:03.825149] Fetched stories for 1 subscribers.
+[2026-03-18 04:17:04.052332] Fetched stories for 2 subscribers.
+[2026-03-18 04:17:04.321624] Fetched stories for 3 subscribers.
+[2026-03-18 04:17:04.322781] Fetched stories for 4 subscribers.
+[2026-03-18 04:17:04.323442] Fetched stories for 5 subscribers.
+[2026-03-18 04:17:05.467705] Fetched stories for 6 subscribers.
+[2026-03-18 04:18:03.391577] Fetched stories for 1 subscribers.
+[2026-03-18 04:18:03.627580] Fetched stories for 2 subscribers.
+[2026-03-18 04:18:03.896863] Fetched stories for 3 subscribers.
+[2026-03-18 04:18:03.897991] Fetched stories for 4 subscribers.
+[2026-03-18 04:18:03.898758] Fetched stories for 5 subscribers.
+[2026-03-18 04:18:05.453767] Fetched stories for 6 subscribers.
+[2026-03-18 04:19:09.240240] Fetched stories for 1 subscribers.
+[2026-03-18 04:19:09.527228] Fetched stories for 2 subscribers.
+[2026-03-18 04:19:09.774062] Fetched stories for 3 subscribers.
+[2026-03-18 04:19:09.775120] Fetched stories for 4 subscribers.
+[2026-03-18 04:19:09.775832] Fetched stories for 5 subscribers.
+[2026-03-18 04:19:11.011206] Fetched stories for 6 subscribers.
+[2026-03-18 04:20:03.218410] Fetched stories for 1 subscribers.
+[2026-03-18 04:20:03.503323] Fetched stories for 2 subscribers.
+[2026-03-18 04:20:03.763311] Fetched stories for 3 subscribers.
+[2026-03-18 04:20:03.764439] Fetched stories for 4 subscribers.
+[2026-03-18 04:20:03.765184] Fetched stories for 5 subscribers.
+[2026-03-18 04:20:07.059942] Fetched stories for 6 subscribers.
+[2026-03-18 04:21:03.332929] Fetched stories for 1 subscribers.
+[2026-03-18 04:21:03.623104] Fetched stories for 2 subscribers.
+[2026-03-18 04:21:03.933082] Fetched stories for 3 subscribers.
+[2026-03-18 04:21:03.934260] Fetched stories for 4 subscribers.
+[2026-03-18 04:21:03.935077] Fetched stories for 5 subscribers.
+[2026-03-18 04:21:05.176485] Fetched stories for 6 subscribers.
+[2026-03-18 04:22:03.495997] Fetched stories for 1 subscribers.
+[2026-03-18 04:22:03.682795] Fetched stories for 2 subscribers.
+[2026-03-18 04:22:03.958302] Fetched stories for 3 subscribers.
+[2026-03-18 04:22:03.959441] Fetched stories for 4 subscribers.
+[2026-03-18 04:22:03.960236] Fetched stories for 5 subscribers.
+[2026-03-18 04:22:07.552477] Fetched stories for 6 subscribers.
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 420, in run_from_argv
+    self.execute(*args, **cmd_options)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 461, in execute
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 743, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 722, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/news_monitoring/urls.py", line 28, in <module>
+    path("sources/", include("source.urls")),
+                     ~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/urls.py", line 3, in <module>
+    from . import views
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/views.py", line 11
+    from 
+         ^
+SyntaxError: invalid syntax
+[2026-03-18 04:24:03.995855] Fetched stories for 1 subscribers.
+[2026-03-18 04:24:04.197471] Fetched stories for 2 subscribers.
+[2026-03-18 04:24:04.381003] Fetched stories for 3 subscribers.
+[2026-03-18 04:24:04.382115] Fetched stories for 4 subscribers.
+[2026-03-18 04:24:04.382792] Fetched stories for 5 subscribers.
+[2026-03-18 04:24:05.246688] Fetched stories for 6 subscribers.
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 420, in run_from_argv
+    self.execute(*args, **cmd_options)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 461, in execute
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 743, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 722, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/news_monitoring/urls.py", line 28, in <module>
+    path("sources/", include("source.urls")),
+                     ~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/urls.py", line 3, in <module>
+    from . import views
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/views.py", line 11, in <module>
+    from source.services import get_sources
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/services.py", line 18
+    def get_stories_by_sources()
+                                ^
+SyntaxError: expected ':'
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 420, in run_from_argv
+    self.execute(*args, **cmd_options)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 461, in execute
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 743, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 722, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/news_monitoring/urls.py", line 28, in <module>
+    path("sources/", include("source.urls")),
+                     ~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/urls.py", line 3, in <module>
+    from . import views
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/views.py", line 11, in <module>
+    from source.services import get_sources
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/services.py", line 21
+    
+    ^
+IndentationError: expected an indented block after function definition on line 18
+[2026-03-18 04:27:03.987561] Fetched stories for 1 subscribers.
+[2026-03-18 04:27:04.206104] Fetched stories for 2 subscribers.
+[2026-03-18 04:27:04.404224] Fetched stories for 3 subscribers.
+[2026-03-18 04:27:04.405375] Fetched stories for 4 subscribers.
+[2026-03-18 04:27:04.406231] Fetched stories for 5 subscribers.
+[2026-03-18 04:27:05.250122] Fetched stories for 6 subscribers.
+[2026-03-18 04:28:03.407704] Fetched stories for 1 subscribers.
+[2026-03-18 04:28:03.597874] Fetched stories for 2 subscribers.
+[2026-03-18 04:28:03.798695] Fetched stories for 3 subscribers.
+[2026-03-18 04:28:03.799704] Fetched stories for 4 subscribers.
+[2026-03-18 04:28:03.800345] Fetched stories for 5 subscribers.
+[2026-03-18 04:28:04.750741] Fetched stories for 6 subscribers.
+[2026-03-18 04:29:03.618150] Fetched stories for 1 subscribers.
+[2026-03-18 04:29:03.815454] Fetched stories for 2 subscribers.
+[2026-03-18 04:29:04.021196] Fetched stories for 3 subscribers.
+[2026-03-18 04:29:04.022315] Fetched stories for 4 subscribers.
+[2026-03-18 04:29:04.023106] Fetched stories for 5 subscribers.
+[2026-03-18 04:29:05.078912] Fetched stories for 6 subscribers.
+[2026-03-18 04:30:02.715917] Fetched stories for 1 subscribers.
+[2026-03-18 04:30:02.933825] Fetched stories for 2 subscribers.
+[2026-03-18 04:30:03.198900] Fetched stories for 3 subscribers.
+[2026-03-18 04:30:03.200022] Fetched stories for 4 subscribers.
+[2026-03-18 04:30:03.200963] Fetched stories for 5 subscribers.
+[2026-03-18 04:30:04.032416] Fetched stories for 6 subscribers.
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 420, in run_from_argv
+    self.execute(*args, **cmd_options)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 461, in execute
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 743, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 722, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/news_monitoring/urls.py", line 28, in <module>
+    path("sources/", include("source.urls")),
+                     ~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/urls.py", line 3, in <module>
+    from . import views
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/views.py", line 9, in <module>
+    from source.services import get_sources, get_stories_by_sources
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/services.py", line 25
+    def add_
+            ^
+SyntaxError: expected '('
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 420, in run_from_argv
+    self.execute(*args, **cmd_options)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 461, in execute
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 743, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 722, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/news_monitoring/urls.py", line 28, in <module>
+    path("sources/", include("source.urls")),
+                     ~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/urls.py", line 3, in <module>
+    from . import views
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/views.py", line 9, in <module>
+    from source.services import get_sources, get_stories_by_sources
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/services.py", line 25
+    def add_or_update_sources(user)
+                                   ^
+SyntaxError: expected ':'
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 420, in run_from_argv
+    self.execute(*args, **cmd_options)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 461, in execute
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 743, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 722, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/news_monitoring/urls.py", line 28, in <module>
+    path("sources/", include("source.urls")),
+                     ~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/urls.py", line 3, in <module>
+    from . import views
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/views.py", line 9, in <module>
+    from source.services import get_sources, get_stories_by_sources
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/services.py", line 27
+    source.updated_by = request.user
+IndentationError: unexpected indent
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 420, in run_from_argv
+    self.execute(*args, **cmd_options)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 461, in execute
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 743, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 722, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/news_monitoring/urls.py", line 28, in <module>
+    path("sources/", include("source.urls")),
+                     ~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/urls.py", line 3, in <module>
+    from . import views
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/views.py", line 9, in <module>
+    from source.services import get_sources, get_stories_by_sources
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/services.py", line 28
+    if source.pk is None:
+IndentationError: unexpected indent
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 420, in run_from_argv
+    self.execute(*args, **cmd_options)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 461, in execute
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 743, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 722, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/news_monitoring/urls.py", line 28, in <module>
+    path("sources/", include("source.urls")),
+                     ~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/urls.py", line 3, in <module>
+    from . import views
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/views.py", line 9, in <module>
+    from source.services import get_sources, get_stories_by_sources
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/services.py", line 28
+    if source.pk is None:
+IndentationError: unexpected indent
+[2026-03-18 04:36:04.561263] Fetched stories for 1 subscribers.
+[2026-03-18 04:36:04.777917] Fetched stories for 2 subscribers.
+[2026-03-18 04:36:04.981223] Fetched stories for 3 subscribers.
+[2026-03-18 04:36:04.982330] Fetched stories for 4 subscribers.
+[2026-03-18 04:36:04.983066] Fetched stories for 5 subscribers.
+[2026-03-18 04:36:06.031165] Fetched stories for 6 subscribers.
+[2026-03-18 04:37:02.758665] Fetched stories for 1 subscribers.
+[2026-03-18 04:37:02.948370] Fetched stories for 2 subscribers.
+[2026-03-18 04:37:03.160272] Fetched stories for 3 subscribers.
+[2026-03-18 04:37:03.161629] Fetched stories for 4 subscribers.
+[2026-03-18 04:37:03.163015] Fetched stories for 5 subscribers.
+[2026-03-18 04:37:03.980715] Fetched stories for 6 subscribers.
+[2026-03-18 04:38:03.068873] Fetched stories for 1 subscribers.
+[2026-03-18 04:38:03.257281] Fetched stories for 2 subscribers.
+[2026-03-18 04:38:03.672277] Fetched stories for 3 subscribers.
+[2026-03-18 04:38:03.673372] Fetched stories for 4 subscribers.
+[2026-03-18 04:38:03.674042] Fetched stories for 5 subscribers.
+[2026-03-18 04:38:04.607546] Fetched stories for 6 subscribers.
+[2026-03-18 04:39:03.284151] Fetched stories for 1 subscribers.
+[2026-03-18 04:39:03.693106] Fetched stories for 2 subscribers.
+[2026-03-18 04:39:03.899221] Fetched stories for 3 subscribers.
+[2026-03-18 04:39:03.900340] Fetched stories for 4 subscribers.
+[2026-03-18 04:39:03.901111] Fetched stories for 5 subscribers.
+[2026-03-18 04:39:05.029244] Fetched stories for 6 subscribers.
+[2026-03-18 04:40:02.983190] Fetched stories for 1 subscribers.
+[2026-03-18 04:40:03.160494] Fetched stories for 2 subscribers.
+[2026-03-18 04:40:03.663752] Fetched stories for 3 subscribers.
+[2026-03-18 04:40:03.664953] Fetched stories for 4 subscribers.
+[2026-03-18 04:40:03.665884] Fetched stories for 5 subscribers.
+[2026-03-18 04:40:04.618131] Fetched stories for 6 subscribers.
+[2026-03-18 04:41:03.768252] Fetched stories for 1 subscribers.
+[2026-03-18 04:41:04.007638] Fetched stories for 2 subscribers.
+[2026-03-18 04:41:04.195168] Fetched stories for 3 subscribers.
+[2026-03-18 04:41:04.196233] Fetched stories for 4 subscribers.
+[2026-03-18 04:41:04.196991] Fetched stories for 5 subscribers.
+[2026-03-18 04:41:04.933423] Fetched stories for 6 subscribers.
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 420, in run_from_argv
+    self.execute(*args, **cmd_options)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 461, in execute
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 743, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 722, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/news_monitoring/urls.py", line 28, in <module>
+    path("sources/", include("source.urls")),
+                     ~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/urls.py", line 3, in <module>
+    from . import views
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/views.py", line 9, in <module>
+    from source.services import (
+    ...<3 lines>...
+    )
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/services.py", line 37
+    def 
+        ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 420, in run_from_argv
+    self.execute(*args, **cmd_options)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 461, in execute
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 743, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 722, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/news_monitoring/urls.py", line 28, in <module>
+    path("sources/", include("source.urls")),
+                     ~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/urls.py", line 3, in <module>
+    from . import views
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/views.py", line 9, in <module>
+    from source.services import (
+    ...<3 lines>...
+    )
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/services.py", line 37
+    def source_
+               ^
+SyntaxError: expected '('
+[2026-03-18 04:44:04.647906] Fetched stories for 1 subscribers.
+[2026-03-18 04:44:04.843082] Fetched stories for 2 subscribers.
+[2026-03-18 04:44:05.044932] Fetched stories for 3 subscribers.
+[2026-03-18 04:44:05.046089] Fetched stories for 4 subscribers.
+[2026-03-18 04:44:05.046861] Fetched stories for 5 subscribers.
+[2026-03-18 04:44:06.282714] Fetched stories for 6 subscribers.
+[2026-03-18 04:45:03.410008] Fetched stories for 1 subscribers.
+[2026-03-18 04:45:03.609367] Fetched stories for 2 subscribers.
+[2026-03-18 04:45:03.898102] Fetched stories for 3 subscribers.
+[2026-03-18 04:45:03.899264] Fetched stories for 4 subscribers.
+[2026-03-18 04:45:03.900031] Fetched stories for 5 subscribers.
+[2026-03-18 04:45:04.957140] Fetched stories for 6 subscribers.
+[2026-03-18 04:46:08.140892] Fetched stories for 1 subscribers.
+[2026-03-18 04:46:08.326524] Fetched stories for 2 subscribers.
+[2026-03-18 04:46:08.539075] Fetched stories for 3 subscribers.
+[2026-03-18 04:46:08.540206] Fetched stories for 4 subscribers.
+[2026-03-18 04:46:08.540976] Fetched stories for 5 subscribers.
+[2026-03-18 04:46:09.573093] Fetched stories for 6 subscribers.
+[2026-03-18 04:47:03.910230] Fetched stories for 1 subscribers.
+[2026-03-18 04:47:04.296223] Fetched stories for 2 subscribers.
+[2026-03-18 04:47:04.547097] Fetched stories for 3 subscribers.
+[2026-03-18 04:47:04.548206] Fetched stories for 4 subscribers.
+[2026-03-18 04:47:04.548911] Fetched stories for 5 subscribers.
+[2026-03-18 04:47:06.197693] Fetched stories for 6 subscribers.
+[2026-03-18 04:48:02.717975] Fetched stories for 1 subscribers.
+[2026-03-18 04:48:02.907195] Fetched stories for 2 subscribers.
+[2026-03-18 04:48:03.106081] Fetched stories for 3 subscribers.
+[2026-03-18 04:48:03.107207] Fetched stories for 4 subscribers.
+[2026-03-18 04:48:03.107942] Fetched stories for 5 subscribers.
+[2026-03-18 04:48:04.083411] Fetched stories for 6 subscribers.
+[2026-03-18 04:49:03.720443] Fetched stories for 1 subscribers.
+[2026-03-18 04:49:03.970445] Fetched stories for 2 subscribers.
+[2026-03-18 04:49:04.340575] Fetched stories for 3 subscribers.
+[2026-03-18 04:49:04.341619] Fetched stories for 4 subscribers.
+[2026-03-18 04:49:04.342265] Fetched stories for 5 subscribers.
+[2026-03-18 04:49:06.170209] Fetched stories for 6 subscribers.
+[2026-03-18 04:50:03.929226] Fetched stories for 1 subscribers.
+[2026-03-18 04:50:04.218014] Fetched stories for 2 subscribers.
+[2026-03-18 04:50:04.519006] Fetched stories for 3 subscribers.
+[2026-03-18 04:50:04.520028] Fetched stories for 4 subscribers.
+[2026-03-18 04:50:04.520682] Fetched stories for 5 subscribers.
+[2026-03-18 04:50:06.078165] Fetched stories for 6 subscribers.
+[2026-03-18 04:51:04.330391] Fetched stories for 1 subscribers.
+[2026-03-18 04:51:04.703364] Fetched stories for 2 subscribers.
+[2026-03-18 04:51:05.220004] Fetched stories for 3 subscribers.
+[2026-03-18 04:51:05.221173] Fetched stories for 4 subscribers.
+[2026-03-18 04:51:05.221857] Fetched stories for 5 subscribers.
+[2026-03-18 04:51:08.645884] Fetched stories for 6 subscribers.
+[2026-03-18 04:52:04.044290] Fetched stories for 1 subscribers.
+[2026-03-18 04:52:04.330724] Fetched stories for 2 subscribers.
+[2026-03-18 04:52:04.630402] Fetched stories for 3 subscribers.
+[2026-03-18 04:52:04.631520] Fetched stories for 4 subscribers.
+[2026-03-18 04:52:04.632250] Fetched stories for 5 subscribers.
+[2026-03-18 04:52:05.932644] Fetched stories for 6 subscribers.
+[2026-03-18 04:53:03.282373] Fetched stories for 1 subscribers.
+[2026-03-18 04:53:03.622595] Fetched stories for 2 subscribers.
+[2026-03-18 04:53:04.946623] Fetched stories for 3 subscribers.
+[2026-03-18 04:53:04.947744] Fetched stories for 4 subscribers.
+[2026-03-18 04:53:04.948486] Fetched stories for 5 subscribers.
+[2026-03-18 04:53:06.503493] Fetched stories for 6 subscribers.
+[2026-03-18 04:54:03.646921] Fetched stories for 1 subscribers.
+[2026-03-18 04:54:04.032886] Fetched stories for 2 subscribers.
+[2026-03-18 04:54:04.292651] Fetched stories for 3 subscribers.
+[2026-03-18 04:54:04.293768] Fetched stories for 4 subscribers.
+[2026-03-18 04:54:04.294502] Fetched stories for 5 subscribers.
+[2026-03-18 04:54:05.490261] Fetched stories for 6 subscribers.
+[2026-03-18 04:55:04.108390] Fetched stories for 1 subscribers.
+[2026-03-18 04:55:04.301375] Fetched stories for 2 subscribers.
+[2026-03-18 04:55:04.504127] Fetched stories for 3 subscribers.
+[2026-03-18 04:55:04.505114] Fetched stories for 4 subscribers.
+[2026-03-18 04:55:04.505860] Fetched stories for 5 subscribers.
+[2026-03-18 04:55:05.955616] Fetched stories for 6 subscribers.
+[2026-03-18 04:56:03.350568] Fetched stories for 1 subscribers.
+[2026-03-18 04:56:03.741141] Fetched stories for 2 subscribers.
+[2026-03-18 04:56:03.993212] Fetched stories for 3 subscribers.
+[2026-03-18 04:56:03.994354] Fetched stories for 4 subscribers.
+[2026-03-18 04:56:03.995102] Fetched stories for 5 subscribers.
+[2026-03-18 04:56:05.093268] Fetched stories for 6 subscribers.
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 420, in run_from_argv
+    self.execute(*args, **cmd_options)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 461, in execute
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 743, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 722, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/news_monitoring/urls.py", line 28, in <module>
+    path("sources/", include("source.urls")),
+                     ~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/urls.py", line 3, in <module>
+    from . import views
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/source/views.py", line 22
+    story_id  = 
+                ^
+SyntaxError: invalid syntax
+[2026-03-18 04:58:03.710420] Fetched stories for 1 subscribers.
+[2026-03-18 04:58:03.907637] Fetched stories for 2 subscribers.
+[2026-03-18 04:58:04.104160] Fetched stories for 3 subscribers.
+[2026-03-18 04:58:04.105194] Fetched stories for 4 subscribers.
+[2026-03-18 04:58:04.105846] Fetched stories for 5 subscribers.
+[2026-03-18 04:58:05.262374] Fetched stories for 6 subscribers.
+[2026-03-18 04:59:02.900752] Fetched stories for 1 subscribers.
+[2026-03-18 04:59:03.087848] Fetched stories for 2 subscribers.
+[2026-03-18 04:59:03.300208] Fetched stories for 3 subscribers.
+[2026-03-18 04:59:03.301204] Fetched stories for 4 subscribers.
+[2026-03-18 04:59:03.301872] Fetched stories for 5 subscribers.
+[2026-03-18 04:59:04.127056] Fetched stories for 6 subscribers.
+[2026-03-18 05:00:03.294217] Fetched stories for 1 subscribers.
+[2026-03-18 05:00:03.470410] Fetched stories for 2 subscribers.
+[2026-03-18 05:00:03.767944] Fetched stories for 3 subscribers.
+[2026-03-18 05:00:03.769342] Fetched stories for 4 subscribers.
+[2026-03-18 05:00:03.770068] Fetched stories for 5 subscribers.
+[2026-03-18 05:00:04.909729] Fetched stories for 6 subscribers.
+[2026-03-18 05:01:02.912523] Fetched stories for 1 subscribers.
+[2026-03-18 05:01:03.094228] Fetched stories for 2 subscribers.
+[2026-03-18 05:01:03.345092] Fetched stories for 3 subscribers.
+[2026-03-18 05:01:03.346142] Fetched stories for 4 subscribers.
+[2026-03-18 05:01:03.346839] Fetched stories for 5 subscribers.
+[2026-03-18 05:01:04.553616] Fetched stories for 6 subscribers.
+[2026-03-18 05:02:03.104092] Fetched stories for 1 subscribers.
+[2026-03-18 05:02:03.289033] Fetched stories for 2 subscribers.
+[2026-03-18 05:02:03.464090] Fetched stories for 3 subscribers.
+[2026-03-18 05:02:03.465206] Fetched stories for 4 subscribers.
+[2026-03-18 05:02:03.465985] Fetched stories for 5 subscribers.
+[2026-03-18 05:02:04.463353] Fetched stories for 6 subscribers.
+[2026-03-18 05:03:03.115385] Fetched stories for 1 subscribers.
+[2026-03-18 05:03:03.305106] Fetched stories for 2 subscribers.
+[2026-03-18 05:03:03.590199] Fetched stories for 3 subscribers.
+[2026-03-18 05:03:03.591323] Fetched stories for 4 subscribers.
+[2026-03-18 05:03:03.592126] Fetched stories for 5 subscribers.
+[2026-03-18 05:03:04.767236] Fetched stories for 6 subscribers.
+[2026-03-18 05:04:03.969078] Fetched stories for 1 subscribers.
+[2026-03-18 05:04:04.306519] Fetched stories for 2 subscribers.
+[2026-03-18 05:04:04.543279] Fetched stories for 3 subscribers.
+[2026-03-18 05:04:04.544341] Fetched stories for 4 subscribers.
+[2026-03-18 05:04:04.545119] Fetched stories for 5 subscribers.
+[2026-03-18 05:04:05.503824] Fetched stories for 6 subscribers.
+[2026-03-18 05:05:03.443081] Fetched stories for 1 subscribers.
+[2026-03-18 05:05:03.652367] Fetched stories for 2 subscribers.
+[2026-03-18 05:05:03.900951] Fetched stories for 3 subscribers.
+[2026-03-18 05:05:03.902291] Fetched stories for 4 subscribers.
+[2026-03-18 05:05:03.903399] Fetched stories for 5 subscribers.
+[2026-03-18 05:05:04.778304] Fetched stories for 6 subscribers.
+[2026-03-18 05:06:08.820115] Fetched stories for 1 subscribers.
+[2026-03-18 05:06:09.087489] Fetched stories for 2 subscribers.
+[2026-03-18 05:06:09.433035] Fetched stories for 3 subscribers.
+[2026-03-18 05:06:09.434187] Fetched stories for 4 subscribers.
+[2026-03-18 05:06:09.434958] Fetched stories for 5 subscribers.
+[2026-03-18 05:06:11.243561] Fetched stories for 6 subscribers.
+[2026-03-18 05:07:03.041572] Fetched stories for 1 subscribers.
+[2026-03-18 05:07:03.228958] Fetched stories for 2 subscribers.
+[2026-03-18 05:07:03.452178] Fetched stories for 3 subscribers.
+[2026-03-18 05:07:03.453456] Fetched stories for 4 subscribers.
+[2026-03-18 05:07:03.454322] Fetched stories for 5 subscribers.
+[2026-03-18 05:07:04.469009] Fetched stories for 6 subscribers.
+[2026-03-18 05:08:03.764379] Fetched stories for 1 subscribers.
+[2026-03-18 05:08:03.956794] Fetched stories for 2 subscribers.
+[2026-03-18 05:08:04.311695] Fetched stories for 3 subscribers.
+[2026-03-18 05:08:04.312950] Fetched stories for 4 subscribers.
+[2026-03-18 05:08:04.313693] Fetched stories for 5 subscribers.
+[2026-03-18 05:08:05.270143] Fetched stories for 6 subscribers.
+[2026-03-18 05:09:09.372501] Fetched stories for 1 subscribers.
+[2026-03-18 05:09:09.615713] Fetched stories for 2 subscribers.
+[2026-03-18 05:09:09.897357] Fetched stories for 3 subscribers.
+[2026-03-18 05:09:09.898381] Fetched stories for 4 subscribers.
+[2026-03-18 05:09:09.899096] Fetched stories for 5 subscribers.
+[2026-03-18 05:09:11.970145] Fetched stories for 6 subscribers.
+[2026-03-18 05:10:03.786211] Fetched stories for 1 subscribers.
+[2026-03-18 05:10:03.977392] Fetched stories for 2 subscribers.
+[2026-03-18 05:10:04.184939] Fetched stories for 3 subscribers.
+[2026-03-18 05:10:04.186055] Fetched stories for 4 subscribers.
+[2026-03-18 05:10:04.186768] Fetched stories for 5 subscribers.
+[2026-03-18 05:10:05.116330] Fetched stories for 6 subscribers.
+[2026-03-18 05:11:02.656090] Fetched stories for 1 subscribers.
+[2026-03-18 05:11:02.848569] Fetched stories for 2 subscribers.
+[2026-03-18 05:11:03.055208] Fetched stories for 3 subscribers.
+[2026-03-18 05:11:03.056310] Fetched stories for 4 subscribers.
+[2026-03-18 05:11:03.057002] Fetched stories for 5 subscribers.
+[2026-03-18 05:11:04.194470] Fetched stories for 6 subscribers.
+[2026-03-18 05:12:02.970740] Fetched stories for 1 subscribers.
+[2026-03-18 05:12:03.150503] Fetched stories for 2 subscribers.
+[2026-03-18 05:12:03.374811] Fetched stories for 3 subscribers.
+[2026-03-18 05:12:03.376006] Fetched stories for 4 subscribers.
+[2026-03-18 05:12:03.376785] Fetched stories for 5 subscribers.
+[2026-03-18 05:12:04.086948] Fetched stories for 6 subscribers.
+[2026-03-18 05:13:02.670399] Fetched stories for 1 subscribers.
+[2026-03-18 05:13:02.861078] Fetched stories for 2 subscribers.
+[2026-03-18 05:13:03.073250] Fetched stories for 3 subscribers.
+[2026-03-18 05:13:03.074357] Fetched stories for 4 subscribers.
+[2026-03-18 05:13:03.075122] Fetched stories for 5 subscribers.
+[2026-03-18 05:13:04.411088] Fetched stories for 6 subscribers.
+[2026-03-18 05:14:03.563816] Fetched stories for 1 subscribers.
+[2026-03-18 05:14:03.795813] Fetched stories for 2 subscribers.
+[2026-03-18 05:14:04.055647] Fetched stories for 3 subscribers.
+[2026-03-18 05:14:04.056747] Fetched stories for 4 subscribers.
+[2026-03-18 05:14:04.057661] Fetched stories for 5 subscribers.
+[2026-03-18 05:14:05.133113] Fetched stories for 6 subscribers.
+[2026-03-18 05:15:04.286413] Fetched stories for 1 subscribers.
+[2026-03-18 05:15:04.537354] Fetched stories for 2 subscribers.
+[2026-03-18 05:15:04.999336] Fetched stories for 3 subscribers.
+[2026-03-18 05:15:05.000498] Fetched stories for 4 subscribers.
+[2026-03-18 05:15:05.001295] Fetched stories for 5 subscribers.
+[2026-03-18 05:15:06.469448] Fetched stories for 6 subscribers.
+[2026-03-18 05:16:03.116720] Fetched stories for 1 subscribers.
+[2026-03-18 05:16:03.431105] Fetched stories for 2 subscribers.
+[2026-03-18 05:16:03.763111] Fetched stories for 3 subscribers.
+[2026-03-18 05:16:03.764984] Fetched stories for 4 subscribers.
+[2026-03-18 05:16:03.765909] Fetched stories for 5 subscribers.
+[2026-03-18 05:16:04.842825] Fetched stories for 6 subscribers.
+[2026-03-18 05:17:02.690296] Fetched stories for 1 subscribers.
+[2026-03-18 05:17:02.892001] Fetched stories for 2 subscribers.
+[2026-03-18 05:17:03.085399] Fetched stories for 3 subscribers.
+[2026-03-18 05:17:03.086522] Fetched stories for 4 subscribers.
+[2026-03-18 05:17:03.087294] Fetched stories for 5 subscribers.
+[2026-03-18 05:17:04.052013] Fetched stories for 6 subscribers.
+[2026-03-18 05:18:03.040084] Fetched stories for 1 subscribers.
+[2026-03-18 05:18:03.295022] Fetched stories for 2 subscribers.
+[2026-03-18 05:18:03.504584] Fetched stories for 3 subscribers.
+[2026-03-18 05:18:03.505667] Fetched stories for 4 subscribers.
+[2026-03-18 05:18:03.506452] Fetched stories for 5 subscribers.
+[2026-03-18 05:18:04.451252] Fetched stories for 6 subscribers.
+[2026-03-18 05:19:03.126110] Fetched stories for 1 subscribers.
+[2026-03-18 05:19:03.315463] Fetched stories for 2 subscribers.
+[2026-03-18 05:19:03.485893] Fetched stories for 3 subscribers.
+[2026-03-18 05:19:03.486981] Fetched stories for 4 subscribers.
+[2026-03-18 05:19:03.487786] Fetched stories for 5 subscribers.
+[2026-03-18 05:19:04.767050] Fetched stories for 6 subscribers.
+[2026-03-18 05:20:03.753919] Fetched stories for 1 subscribers.
+[2026-03-18 05:20:04.036532] Fetched stories for 2 subscribers.
+[2026-03-18 05:20:04.237386] Fetched stories for 3 subscribers.
+[2026-03-18 05:20:04.238466] Fetched stories for 4 subscribers.
+[2026-03-18 05:20:04.239169] Fetched stories for 5 subscribers.
+[2026-03-18 05:20:05.829198] Fetched stories for 6 subscribers.
+[2026-03-18 05:21:03.739506] Fetched stories for 1 subscribers.
+[2026-03-18 05:21:04.152949] Fetched stories for 2 subscribers.
+[2026-03-18 05:21:04.341278] Fetched stories for 3 subscribers.
+[2026-03-18 05:21:04.343347] Fetched stories for 4 subscribers.
+[2026-03-18 05:21:04.344234] Fetched stories for 5 subscribers.
+[2026-03-18 05:21:05.689454] Fetched stories for 6 subscribers.
+[2026-03-18 05:22:03.956036] Fetched stories for 1 subscribers.
+[2026-03-18 05:22:04.147640] Fetched stories for 2 subscribers.
+[2026-03-18 05:22:04.355125] Fetched stories for 3 subscribers.
+[2026-03-18 05:22:04.356292] Fetched stories for 4 subscribers.
+[2026-03-18 05:22:04.357098] Fetched stories for 5 subscribers.
+[2026-03-18 05:22:05.618497] Fetched stories for 6 subscribers.
+[2026-03-18 05:23:04.476608] Fetched stories for 1 subscribers.
+[2026-03-18 05:23:04.649171] Fetched stories for 2 subscribers.
+[2026-03-18 05:23:04.870348] Fetched stories for 3 subscribers.
+[2026-03-18 05:23:04.871467] Fetched stories for 4 subscribers.
+[2026-03-18 05:23:04.872233] Fetched stories for 5 subscribers.
+[2026-03-18 05:23:06.132806] Fetched stories for 6 subscribers.
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 276, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/management/commands/fetch_stories.py", line 6, in <module>
+    from story.services import fetch_stories
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/services.py", line 61
+    def         
+                ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 276, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/management/commands/fetch_stories.py", line 6, in <module>
+    from story.services import fetch_stories
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/services.py", line 63
+    story.company = user.subscriber.company
+IndentationError: unexpected indent
+[2026-03-18 05:26:04.299978] Fetched stories for 1 subscribers.
+[2026-03-18 05:26:04.509753] Fetched stories for 2 subscribers.
+[2026-03-18 05:26:04.690472] Fetched stories for 3 subscribers.
+[2026-03-18 05:26:04.691533] Fetched stories for 4 subscribers.
+[2026-03-18 05:26:04.692206] Fetched stories for 5 subscribers.
+[2026-03-18 05:26:05.741194] Fetched stories for 6 subscribers.
+[2026-03-18 05:27:05.099503] Fetched stories for 1 subscribers.
+[2026-03-18 05:27:05.410062] Fetched stories for 2 subscribers.
+[2026-03-18 05:27:05.783171] Fetched stories for 3 subscribers.
+[2026-03-18 05:27:05.784276] Fetched stories for 4 subscribers.
+[2026-03-18 05:27:05.784963] Fetched stories for 5 subscribers.
+[2026-03-18 05:27:07.143410] Fetched stories for 6 subscribers.
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 276, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/management/commands/fetch_stories.py", line 6, in <module>
+    from story.services import fetch_stories
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/services.py", line 73
+    def delete
+              ^
+SyntaxError: expected '('
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 276, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/management/commands/fetch_stories.py", line 6, in <module>
+    from story.services import fetch_stories
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/services.py", line 75
+    
+    ^
+IndentationError: expected an indented block after function definition on line 73
+[2026-03-18 05:30:04.098419] Fetched stories for 1 subscribers.
+[2026-03-18 05:30:04.358174] Fetched stories for 2 subscribers.
+[2026-03-18 05:30:04.658929] Fetched stories for 3 subscribers.
+[2026-03-18 05:30:04.660084] Fetched stories for 4 subscribers.
+[2026-03-18 05:30:04.660845] Fetched stories for 5 subscribers.
+[2026-03-18 05:30:05.984964] Fetched stories for 6 subscribers.
+[2026-03-18 05:31:02.504940] Fetched stories for 1 subscribers.
+[2026-03-18 05:31:02.688494] Fetched stories for 2 subscribers.
+[2026-03-18 05:31:02.889980] Fetched stories for 3 subscribers.
+[2026-03-18 05:31:02.891077] Fetched stories for 4 subscribers.
+[2026-03-18 05:31:02.891849] Fetched stories for 5 subscribers.
+[2026-03-18 05:31:03.846560] Fetched stories for 6 subscribers.
+[2026-03-18 05:32:03.647754] Fetched stories for 1 subscribers.
+[2026-03-18 05:32:03.832384] Fetched stories for 2 subscribers.
+[2026-03-18 05:32:04.040688] Fetched stories for 3 subscribers.
+[2026-03-18 05:32:04.041837] Fetched stories for 4 subscribers.
+[2026-03-18 05:32:04.042579] Fetched stories for 5 subscribers.
+[2026-03-18 05:32:04.995423] Fetched stories for 6 subscribers.
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 420, in run_from_argv
+    self.execute(*args, **cmd_options)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 461, in execute
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/checks/urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 743, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/resolvers.py", line 722, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/news_monitoring/urls.py", line 29, in <module>
+    path("stories/", include("story.urls")),
+                     ~~~~~~~^^^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/urls.py", line 3, in <module>
+    from . import views
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/views.py", line 90
+    story = Story.
+                  ^
+SyntaxError: invalid syntax
+[2026-03-18 05:34:06.256355] Fetched stories for 1 subscribers.
+[2026-03-18 05:34:06.657455] Fetched stories for 2 subscribers.
+[2026-03-18 05:34:07.173704] Fetched stories for 3 subscribers.
+[2026-03-18 05:34:07.174769] Fetched stories for 4 subscribers.
+[2026-03-18 05:34:07.175525] Fetched stories for 5 subscribers.
+[2026-03-18 05:34:10.074984] Fetched stories for 6 subscribers.
+[2026-03-18 05:35:03.179554] Fetched stories for 1 subscribers.
+[2026-03-18 05:35:03.546067] Fetched stories for 2 subscribers.
+[2026-03-18 05:35:03.761292] Fetched stories for 3 subscribers.
+[2026-03-18 05:35:03.762416] Fetched stories for 4 subscribers.
+[2026-03-18 05:35:03.763187] Fetched stories for 5 subscribers.
+[2026-03-18 05:35:04.569905] Fetched stories for 6 subscribers.
+[2026-03-18 05:36:03.594351] Fetched stories for 1 subscribers.
+[2026-03-18 05:36:03.925320] Fetched stories for 2 subscribers.
+[2026-03-18 05:36:04.256608] Fetched stories for 3 subscribers.
+[2026-03-18 05:36:04.257998] Fetched stories for 4 subscribers.
+[2026-03-18 05:36:04.258795] Fetched stories for 5 subscribers.
+[2026-03-18 05:36:05.389510] Fetched stories for 6 subscribers.
+[2026-03-18 05:37:04.783661] Fetched stories for 1 subscribers.
+[2026-03-18 05:37:05.066671] Fetched stories for 2 subscribers.
+[2026-03-18 05:37:05.706024] Fetched stories for 3 subscribers.
+[2026-03-18 05:37:05.707068] Fetched stories for 4 subscribers.
+[2026-03-18 05:37:05.707815] Fetched stories for 5 subscribers.
+[2026-03-18 05:37:07.437337] Fetched stories for 6 subscribers.
+[2026-03-18 05:38:04.995864] Fetched stories for 1 subscribers.
+[2026-03-18 05:38:05.288737] Fetched stories for 2 subscribers.
+[2026-03-18 05:38:05.680825] Fetched stories for 3 subscribers.
+[2026-03-18 05:38:05.682117] Fetched stories for 4 subscribers.
+[2026-03-18 05:38:05.683177] Fetched stories for 5 subscribers.
+[2026-03-18 05:38:07.650618] Fetched stories for 6 subscribers.
+[2026-03-18 05:39:04.348300] Fetched stories for 1 subscribers.
+[2026-03-18 05:39:04.675531] Fetched stories for 2 subscribers.
+[2026-03-18 05:39:04.945563] Fetched stories for 3 subscribers.
+[2026-03-18 05:39:04.946729] Fetched stories for 4 subscribers.
+[2026-03-18 05:39:04.947421] Fetched stories for 5 subscribers.
+[2026-03-18 05:39:06.948809] Fetched stories for 6 subscribers.
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 276, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/management/commands/fetch_stories.py", line 6, in <module>
+    from story.services import fetch_stories
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/services.py", line 48, in <module>
+    get
+NameError: name 'get' is not defined. Did you mean: 'set'?
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 276, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/management/commands/fetch_stories.py", line 6, in <module>
+    from story.services import fetch_stories
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/services.py", line 48
+    def get_stories()
+                     ^
+SyntaxError: expected ':'
+[2026-03-18 05:42:04.199598] Fetched stories for 1 subscribers.
+[2026-03-18 05:42:04.430999] Fetched stories for 2 subscribers.
+[2026-03-18 05:42:04.634251] Fetched stories for 3 subscribers.
+[2026-03-18 05:42:04.635715] Fetched stories for 4 subscribers.
+[2026-03-18 05:42:04.636506] Fetched stories for 5 subscribers.
+[2026-03-18 05:42:06.336453] Fetched stories for 6 subscribers.
+[2026-03-18 05:43:03.642304] Fetched stories for 1 subscribers.
+[2026-03-18 05:43:03.926826] Fetched stories for 2 subscribers.
+[2026-03-18 05:43:04.122801] Fetched stories for 3 subscribers.
+[2026-03-18 05:43:04.123913] Fetched stories for 4 subscribers.
+[2026-03-18 05:43:04.124658] Fetched stories for 5 subscribers.
+[2026-03-18 05:43:05.576610] Fetched stories for 6 subscribers.
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 276, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/management/commands/fetch_stories.py", line 6, in <module>
+    from story.services import fetch_stories
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/services.py", line 71
+    def get_story_by_id()
+                         ^
+SyntaxError: expected ':'
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 276, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/management/commands/fetch_stories.py", line 6, in <module>
+    from story.services import fetch_stories
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/services.py", line 71
+    def get_story_by_id()
+                         ^
+SyntaxError: expected ':'
+Traceback (most recent call last):
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 437, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 276, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "/home/prashantkumar/.pyenv/versions/news-env/lib/python3.14/site-packages/django/core/management/__init__.py", line 48, in load_command_class
+    module = import_module("%s.management.commands.%s" % (app_name, name))
+  File "/home/prashantkumar/.pyenv/versions/3.14.2/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/management/commands/fetch_stories.py", line 6, in <module>
+    from story.services import fetch_stories
+  File "/home/prashantkumar/Desktop/DUMMY_PROJECT/News_Monitoring/story/services.py", line 72
+    if 
+       ^
+SyntaxError: invalid syntax
+[2026-03-18 05:47:04.344464] Fetched stories for 1 subscribers.
+[2026-03-18 05:47:04.565864] Fetched stories for 2 subscribers.
+[2026-03-18 05:47:04.827932] Fetched stories for 3 subscribers.
+[2026-03-18 05:47:04.829357] Fetched stories for 4 subscribers.
+[2026-03-18 05:47:04.830087] Fetched stories for 5 subscribers.
+[2026-03-18 05:47:06.289027] Fetched stories for 6 subscribers.
+[2026-03-18 05:48:04.655183] Fetched stories for 1 subscribers.
+[2026-03-18 05:48:04.839858] Fetched stories for 2 subscribers.
+[2026-03-18 05:48:05.088876] Fetched stories for 3 subscribers.
+[2026-03-18 05:48:05.089961] Fetched stories for 4 subscribers.
+[2026-03-18 05:48:05.090710] Fetched stories for 5 subscribers.
+[2026-03-18 05:48:06.029017] Fetched stories for 6 subscribers.
+[2026-03-18 05:49:03.758018] Fetched stories for 1 subscribers.
+[2026-03-18 05:49:04.081391] Fetched stories for 2 subscribers.
+[2026-03-18 05:49:04.699270] Fetched stories for 3 subscribers.
+[2026-03-18 05:49:04.700379] Fetched stories for 4 subscribers.
+[2026-03-18 05:49:04.701108] Fetched stories for 5 subscribers.
+[2026-03-18 05:49:06.760507] Fetched stories for 6 subscribers.
+[2026-03-18 05:50:04.592455] Fetched stories for 1 subscribers.
+[2026-03-18 05:50:05.075572] Fetched stories for 2 subscribers.
+[2026-03-18 05:50:05.560862] Fetched stories for 3 subscribers.
+[2026-03-18 05:50:05.562384] Fetched stories for 4 subscribers.
+[2026-03-18 05:50:05.563615] Fetched stories for 5 subscribers.
+[2026-03-18 05:50:06.744216] Fetched stories for 6 subscribers.
+[2026-03-18 05:51:05.971575] Fetched stories for 1 subscribers.
+[2026-03-18 05:51:06.886425] Fetched stories for 2 subscribers.
+[2026-03-18 05:51:07.271226] Fetched stories for 3 subscribers.
+[2026-03-18 05:51:07.272362] Fetched stories for 4 subscribers.
+[2026-03-18 05:51:07.273080] Fetched stories for 5 subscribers.
+[2026-03-18 05:51:08.701798] Fetched stories for 6 subscribers.

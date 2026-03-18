@@ -10,6 +10,7 @@
     <h2 class="fw-bold">All Sources</h2>
 
     <div>
+       
         <a href="{% url 'source:add' %}" class="btn btn-success me-2">
             + Add Source
         </a>
@@ -33,7 +34,57 @@
     </div>
 </form>
 
-{% if stories %}
+{% if story %}
+<div class="mt-4">
+    <h3 class="mb-3">Story Details</h3>
+    <a href="{% url 'source:list' %}" class="btn btn-secondary btn-sm mb-3">Back To Source</a>
+    
+    <div class="card mb-3 shadow-sm border-0">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="card-title text-primary mb-3">
+                        {{ story.title }}
+                    </h5>
+
+                    <p class="mb-2">
+                        <strong>Source:</strong>
+                        <span class="text-success">
+                            {{ story.source.name }}
+                        </span>
+                    </p>
+
+                    <p class="mb-2">
+                        <strong>URL:</strong>
+                        <a href="{{ story.url }}" target="_blank" class="text-decoration-none">
+                            {{ story.url }}
+                        </a>
+                    </p>
+
+                    <p class="mb-2">
+                        <strong>Body:</strong>
+                        <p class="text-muted">
+                            {{ story.body_text }}
+                        </p>
+                    </p>
+
+                    <p class="mb-0">
+                        <strong>Tagged Companies:</strong>
+                        {% for company in story.tagged_companies.all %}
+                            <span class="badge bg-secondary me-1">
+                                {{ company.name }}
+                            </span>
+                        {% empty %}
+                            <span class="text-muted">No Tags</span>
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% elif stories %}
 <div class="mt-4">
     <h3 class="mb-3">Stories from Selected Source</h3>
     <a href="{% url 'source:list' %}" class="btn btn-secondary btn-sm mb-3">Back To Source</a>
@@ -65,7 +116,7 @@
                     {{ story.source.name }}
                 </div>
                 <div class="col-md-2">
-                    <a href="{% url 'story:story_detail' story.id %}" class="btn btn-sm btn-outline-info">
+                    <a href="?story_id={{ story.id }}"  class="btn btn-sm btn-outline-info">
                         View
                     </a>
                 </div>
@@ -76,12 +127,6 @@
 </div>
 
 {% else %}
-
-
-
-
-
-
 
 {% for source in page_obj %}
 

@@ -1,20 +1,10 @@
 import feedparser
 
+from django.db.models import Q
 from django.shortcuts import render
 
 from source.models import Source
 from story.models import Story
-
-
-def add_story(form, user):
-    story = form.save(commit=False)
-    story.created_by = user
-    story.updated_by = user
-    story.company = user.subscriber.company
-    story.save()
-    form.save_m2m()
-
-    return story
 
 
 def fetch_stories(user):
@@ -50,9 +40,52 @@ def fetch_stories(user):
                     body_text=summary,
                     created_by=user,
                     updated_by=user,
-                    
                 )
             )
 
     if stories:
         Story.objects.bulk_create(stories, ignore_conflicts=True)
+
+
+def get_stories(user, query=None):
+    stories = Story.objects.select_related(
+        "source",
+        "created_by",
+        "updated_by",
+    ).prefetch_related("tagged_companies")
+
+    if not user.is_staff:
+        stories = stories.filter(company=user.subscriber.company)
+
+    if query:
+        search_filter = (
+            Q(title__icontains=query)
+            | Q(body_text__icontains=query)
+            | Q(source__name__icontains=query)
+        )
+        stories = stories.filter(search_filter)
+
+    return stories
+
+
+def get_story_by_id(story_id):
+    if not story_id:
+        return None
+    return Story.objects.get(id=story_id)
+
+
+def create_or_update_story(form, user):
+    story = form.save(commit=False)
+    story.company = user.subscriber.company
+    if story.pk is None:
+        story.created_by = user
+
+    story.updated_by = user
+    story.save()
+    form.save_m2m()
+
+    return story
+
+
+def story_delete(story):
+    story.delete()

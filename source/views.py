@@ -1,36 +1,30 @@
-from urllib import request
-
-from dal import autocomplete
-
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, redirect, render
 
-from company.models import Company
+
 from source.forms import SourceForm
 from source.models import Source
 from story.models import Story
+from source.services import (
+    get_sources,
+    get_stories_by_source,
+    get_story,
+    add_or_update_source,
+    source_delete,
+)
 
 
 @login_required
 def fetch_sources(request):
     query = request.GET.get("q", "")
-    page_number = request.GET.get("page")
+    page_number = request.GET.get("page",1)
     source_id = request.GET.get("source_id")
+    story_id  = request.GET.get("story_id")
 
-    sources = Source.objects.select_related(
-        "company", "created_by", "updated_by"
-    ).prefetch_related("tagged_companies")
-
-    if not request.user.is_staff:
-        sources = sources.filter(company=request.user.subscriber.company)
-
-    if query:
-        sources = sources.filter(name__icontains=query)
-
-    stories = None
-    if source_id:
-        stories = Story.objects.filter(source_id=source_id)
+    sources = get_sources(request.user, query)
+    stories = get_stories_by_source(source_id)
+    story   = get_story(story_id)
 
     paginator = Paginator(sources, 25)
 
@@ -43,6 +37,7 @@ def fetch_sources(request):
             "page_obj": page_obj,
             "query": query,
             "stories": stories,
+            "story":story
         },
     )
 
@@ -61,13 +56,7 @@ def create_or_update(request, source_id=None):
         form = SourceForm(request.POST, instance=source, request=request)
 
         if form.is_valid():
-            source = form.save(commit=False)
-            source.updated_by = request.user
-            if source.pk is None:
-                source.created_by = request.user
-            source.company = request.user.subscriber.company
-            source.save()
-            form.save_m2m()
+            add_or_update_source(form, request.user)
             return redirect("source:list")
 
     else:
@@ -77,11 +66,10 @@ def create_or_update(request, source_id=None):
 
 
 @login_required
-def delete(request, source_id):
+def delete_source(request, source_id):
 
     source = get_object_or_404(Source, id=source_id)
 
     if request.method == "POST":
-        source.delete()
-        return redirect("source:list")
+        source_delete(source)
     return render(request, "source/source_delete.html", {"source": source})

@@ -10,15 +10,13 @@ from subscriber.models import Subscriber
 
 
 def signup_view(request):
-    """view handle user regisration and create subscriber profile 
+    """view handle user regisration and create subscriber profile
     linked to a company."""
     if request.method == "POST":
         form = SignupForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data
 
-             # Ensure that user creation and subscriber profile creation are 
-             # atomic
             with transaction.atomic():
                 user = User.objects.create_user(
                     username=data["username"],
