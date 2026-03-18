@@ -1,7 +1,6 @@
 import feedparser
 
 from django.db.models import Q
-from django.shortcuts import render
 
 from source.models import Source
 from story.models import Story
@@ -47,32 +46,24 @@ def fetch_stories(user):
         Story.objects.bulk_create(stories, ignore_conflicts=True)
 
 
-def get_stories(user, query=None):
-    stories = Story.objects.select_related(
-        "source",
-        "created_by",
-        "updated_by",
-    ).prefetch_related("tagged_companies")
-
+def get_stories(user, query=None, source_id=None):
+    qd = {}
     if not user.is_staff:
-        stories = stories.filter(company=user.subscriber.company)
+        qd["company_id"] = user.subscriber.company
 
     if query:
-        search_filter = (
-            Q(title__icontains=query)
-            | Q(body_text__icontains=query)
-            | Q(source__name__icontains=query)
-        )
-        stories = stories.filter(search_filter)
+        qd["title__icontains"] = query
 
-    return stories
+    if source_id:
+        qd["source_id"] = source_id
 
+    return (
+        Story.objects.filter(**qd)
+        .select_related("source", "created_by", "updated_by")
+        .prefetch_related("tagged_companies")
+    )
 
-def get_story_by_id(story_id):
-    if not story_id:
-        return None
-    return Story.objects.get(id=story_id)
-
+    
 
 def create_or_update_story(form, user):
     story = form.save(commit=False)
@@ -87,5 +78,4 @@ def create_or_update_story(form, user):
     return story
 
 
-def story_delete(story):
-    story.delete()
+

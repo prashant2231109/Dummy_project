@@ -34,99 +34,11 @@
     </div>
 </form>
 
-{% if story %}
-<div class="mt-4">
-    <h3 class="mb-3">Story Details</h3>
-    <a href="{% url 'source:list' %}" class="btn btn-secondary btn-sm mb-3">Back To Source</a>
-    
-    <div class="card mb-3 shadow-sm border-0">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-12">
-                    <h5 class="card-title text-primary mb-3">
-                        {{ story.title }}
-                    </h5>
 
-                    <p class="mb-2">
-                        <strong>Source:</strong>
-                        <span class="text-success">
-                            {{ story.source.name }}
-                        </span>
-                    </p>
 
-                    <p class="mb-2">
-                        <strong>URL:</strong>
-                        <a href="{{ story.url }}" target="_blank" class="text-decoration-none">
-                            {{ story.url }}
-                        </a>
-                    </p>
 
-                    <p class="mb-2">
-                        <strong>Body:</strong>
-                        <p class="text-muted">
-                            {{ story.body_text }}
-                        </p>
-                    </p>
 
-                    <p class="mb-0">
-                        <strong>Tagged Companies:</strong>
-                        {% for company in story.tagged_companies.all %}
-                            <span class="badge bg-secondary me-1">
-                                {{ company.name }}
-                            </span>
-                        {% empty %}
-                            <span class="text-muted">No Tags</span>
-                        {% endfor %}
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-{% elif stories %}
-<div class="mt-4">
-    <h3 class="mb-3">Stories from Selected Source</h3>
-    <a href="{% url 'source:list' %}" class="btn btn-secondary btn-sm mb-3">Back To Source</a>
-    
-    <div class="row text-center fw-bold border-bottom pb-2 mb-2">
-        <div class="col-md-2">ID</div>
-        <div class="col-md-3">Title</div>
-        <div class="col-md-3">URL</div>
-        <div class="col-md-2">Source</div>
-        <div class="col-md-2">Action</div>
-    </div>
-
-    {% for story in stories %}
-    <div class="card mb-3 shadow-sm border-0">
-        <div class="card-body">
-            <div class="row align-items-center text-center">
-                <div class="col-md-2">
-                    <strong>{{ story.id }}</strong>
-                </div>
-                <div class="col-md-3 text-primary">
-                    <strong>{{ story.title|truncatewords:10 }}</strong>
-                </div>
-                <div class="col-md-3">
-                    <a href="{{ story.url }}" target="_blank" class="text-decoration-none">
-                        Visit
-                    </a>
-                </div>
-                <div class="col-md-2 text-success">
-                    {{ story.source.name }}
-                </div>
-                <div class="col-md-2">
-                    <a href="?story_id={{ story.id }}"  class="btn btn-sm btn-outline-info">
-                        View
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-
-{% else %}
 
 {% for source in page_obj %}
 
@@ -162,7 +74,7 @@
     </div>
 
     <div class="col-md-2">
-        <a href="?source_id={{ source.id }}" class="btn btn-primary btn-sm">
+        <a href="/stories/?source_id={{source.id}}" class="btn btn-primary btn-sm">
             View Stories
         </a>
     </div>
@@ -225,10 +137,6 @@
         {% endif %}
     </span>
 </div>
-
-{% endif %}
-
-
 
 {% endblock %}
 

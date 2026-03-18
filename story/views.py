@@ -11,17 +11,16 @@ from django.shortcuts import render, redirect
 from story.forms import StoryForm
 from story.models import Story
 from source.models import Source
-from story.services import create_or_update_story, get_stories, get_story_by_id
+from story.services import create_or_update_story, get_stories
 
 
 @login_required
 def fetch_stories(request):
     page_number = request.GET.get("page", 1)
     query = request.GET.get("q", "")
-    story_id = request.GET.get("story_id")
+    source_id = request.GET.get("source_id")
 
-    stories = get_stories(request.user, query=None)
-    story = get_story_by_id(story_id)
+    stories = get_stories(request.user, query, source_id)
 
     paginator = Paginator(stories, 25)
     page_obj = paginator.get_page(page_number)
@@ -29,7 +28,7 @@ def fetch_stories(request):
     return render(
         request,
         "story/story_list.html",
-        {"page_obj": page_obj, "query": query, "story": story},
+        {"page_obj": page_obj, "query": query},
     )
 
 
@@ -76,7 +75,7 @@ def delete_story(request, story_id):
         return redirect("story:list")
 
     if request.method == "POST":
-        delete_story(story)
+        story.delete()
         return redirect("story:list")
 
     return render(request, "story/story_delete.html", {"story": story})
