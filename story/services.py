@@ -49,13 +49,14 @@ def fetch_stories(user):
 def get_stories(user, query=None, source_id=None):
     qd = {}
     if not user.is_staff:
-        qd["company_id"] = user.subscriber.company
+        qd["company_id"] = user.subscriber.company_id
 
     if query:
         qd["title__icontains"] = query
 
     if source_id:
         qd["source_id"] = source_id
+        
 
     return (
         Story.objects.filter(**qd)
@@ -64,7 +65,6 @@ def get_stories(user, query=None, source_id=None):
     )
 
     
-
 def create_or_update_story(form, user):
     story = form.save(commit=False)
     story.company = user.subscriber.company

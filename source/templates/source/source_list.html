@@ -89,9 +89,13 @@
 
 {% if request.user.is_staff or request.user == source.created_by %}
 <div class="col-md-1">
-    <a href="{% url 'source:delete' source.id %}" class="btn btn-danger btn-sm">
-        Delete
-    </a>
+    <form method="POST" action="{% url 'source:delete' source.id %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger btn-sm w-100"
+    onclick="return confirm('Are you sure you want to delete this story?');">
+    Delete
+</button>
+    </form>
 </div>
 {% endif %}
 

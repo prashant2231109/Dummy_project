@@ -9,14 +9,11 @@ def get_sources(user, query=None):
         qd["name__icontains"] = query
 
     if not user.is_staff:
-        qd["company"] =  user.subscriber.company  
+        qd["company_id"] =  user.subscriber.company_id
 
-    sources = Source.objects.filter(**qd).select_related(
+    return Source.objects.filter(**qd).select_related(
         "company", "created_by", "updated_by"
     ).prefetch_related("tagged_companies")
-
-    return sources
-
 
 
 def add_or_update_source(form, user):

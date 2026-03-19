@@ -48,6 +48,8 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
 
             if user is not None:
+                user = User.objects.select_related("subscriber").get(id=user.id)
+
                 login(request, user)
 
                 if (
