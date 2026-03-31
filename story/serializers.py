@@ -16,14 +16,15 @@ class CompanySerializer(serializers.ModelSerializer):
 
 
 class StorySerializer(serializers.ModelSerializer):
-    tagged_companies= serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Company.objects.only("id") 
+    tagged_companies = serializers.PrimaryKeyRelatedField(
+        many=True, 
+        queryset=Company.objects.all(),
+        write_only=True  
     )
     tagged_companies_data = CompanySerializer(
         many=True, read_only=True, source="tagged_companies"
     )
-    source_data = SourceSerializer(read_only=True , source="source")
-
+    source_data = SourceSerializer(read_only=True, source="source")
     company_data = CompanySerializer(read_only=True, source="company")
 
     class Meta:

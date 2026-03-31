@@ -29,6 +29,8 @@ urlpatterns = [
     path("stories/", include("story.urls")),
     path("source/" , include("source.drf.urls")),
     path("story/" , include("story.drf.urls")),
+    path("subscriber/" , include("subscriber.drf.urls")),
+    path("company/" , include("company.drf.urls")),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
 ]
 

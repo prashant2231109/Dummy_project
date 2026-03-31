@@ -12,7 +12,9 @@ class CompanySerializer(serializers.ModelSerializer):
 
 class SourceSerializer(serializers.ModelSerializer):
     tagged_companies = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Company.objects.all()
+        many=True,
+        queryset=Company.objects.all(),
+        write_only=True,  
     )
 
     tagged_companies_data = CompanySerializer(
@@ -28,6 +30,3 @@ class SourceSerializer(serializers.ModelSerializer):
             "tagged_companies",
             "tagged_companies_data",
         ]
-
-  
-        
