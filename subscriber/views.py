@@ -9,6 +9,9 @@ from subscriber.forms import LoginForm, SignupForm
 from subscriber.models import Subscriber
 
 
+
+
+
 def signup_view(request):
     """view handle user regisration and create subscriber profile
     linked to a company."""
@@ -34,6 +37,8 @@ def signup_view(request):
     else:
         form = SignupForm()
     return render(request, "users/signup.html", {"form": form})
+
+    
 
 
 def login_view(request):
@@ -73,3 +78,9 @@ def logout_view(request):
     logout(request)
     messages.success(request, "Logged out successfully")
     return redirect("login")
+
+
+
+
+
+

@@ -1,6 +1,6 @@
-from django.urls import path, include
+from django.urls import path
 
-from . import views
+from story import views
 
 app_name = "story"
 
@@ -10,5 +10,4 @@ urlpatterns = [
     path("update/<int:story_id>/", views.create_or_update, name="update"),
     path("delete/<int:story_id>/", views.delete_story, name="delete"),
     path("search/", views.SourceAutocomplete.as_view(), name="search"),
-  
 ]

@@ -10,6 +10,8 @@ from source.models import Source
 from source.services import get_sources, add_or_update_source
 
 
+
+
 @login_required
 @require_GET
 def fetch_sources(request):
@@ -28,25 +30,22 @@ def create_or_update(request, source_id=None):
     """
     for source creation and updation
     """
-  
 
     if request.method == "POST":
         form = SourceForm(request.POST, request=request)
         if form.is_valid():
             add_or_update_source(form, request.user)
             return redirect("source:list")
-        
-    
 
     else:
         source = None
-    
-        if source_id: 
+
+        if source_id:
             try:
                 qd = {"id": source_id}
                 if not request.user.is_staff:
-                    qd["created_by"] = request.user  
-                    
+                    qd["created_by"] = request.user
+
                 source = Source.objects.filter(**qd)
             except Source.DoesNotExist:
                 messages.error(request, "Source not found.")
@@ -66,3 +65,5 @@ def delete_source(request, source_id):
 
     Source.objects.filter(**qd).delete()
     return redirect("source:list")
+
+
