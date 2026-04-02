@@ -7,6 +7,9 @@ from django.views.decorators.csrf import csrf_exempt
 from source.models import Source
 from django.contrib.auth import login
 
+from rest_framework_simplejwt.tokens import RefreshToken
+
+
 
 @csrf_exempt
 @api_view(["POST"])
@@ -32,19 +35,16 @@ def login_view(request):
     if serializer.is_valid():
         user = serializer.validated_data["user"]
 
-        login(request, user)
-        # import ipdb;
-        # ipdb.set_trace()
+      
         
-
-        has_sources = Source.objects.filter(
-            company=request.user.subscriber.company
-        ).exists()
-
+        refresh = RefreshToken.for_user(user)
+        
         return Response({
             "message": "Login successful",
             "username": user.username,
-            "has_sources": has_sources   
+            "access": str(refresh.access_token),
+            "refresh": str(refresh),
+             
         })
 
         

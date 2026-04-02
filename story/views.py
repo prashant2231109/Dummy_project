@@ -15,6 +15,9 @@ from source.models import Source
 from story.services import create_or_update_story, get_stories
 
 
+from django.http import JsonResponse
+
+
 @login_required
 @require_GET
 def fetch_stories(request):
@@ -32,6 +35,16 @@ def fetch_stories(request):
         "story/story_list.html",
         {"page_obj": page_obj, "query": query},
     )
+
+    # data = {
+    #     "results": list(page_obj.object_list.values()),
+    #     "total_pages": paginator.num_pages,
+    #     "current_page": page_obj.number,
+    #     "has_next": page_obj.has_next(),
+    #     "has_previous": page_obj.has_previous(),
+    # }
+
+    # return JsonResponse(data)
 
 
 @login_required
@@ -84,3 +97,8 @@ class SourceAutocomplete(autocomplete.Select2QuerySetView):
             queryset = queryset.filter(name__istartswith=self.q)
 
         return queryset[:10]
+    
+
+
+def new_stories(request):
+    return render(request, "story/index.html", context={})

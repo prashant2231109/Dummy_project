@@ -10,4 +10,5 @@ urlpatterns = [
     path("add/", views.create_or_update, name="add"),
     path("update/<int:source_id>/", views.create_or_update, name="update"),
     path("delete/<int:source_id>/", views.delete_source, name="delete"),
+    path("new/", views.new_source, name="new"),
 ]

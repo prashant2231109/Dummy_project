@@ -10,6 +10,6 @@ app_name = "story"
 
 urlpatterns = [
    path("signup/", functionals.signup_view, name="signup"),
-    path("login/", functionals.login_view, name="login"),  
+path("login/", functionals.login_view, name="login"),  
   
 ]

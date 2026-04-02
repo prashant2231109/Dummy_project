@@ -67,3 +67,9 @@ def delete_source(request, source_id):
     return redirect("source:list")
 
 
+
+
+def new_source(request):
+    return render(request, "source/index.html", context={})
+
+
