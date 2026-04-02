@@ -1,3 +1,17 @@
+<div class="header">
+    <h2>All Sources</h2>
+
+    <div class="actions">
+      <button class="btn green" (click)="selectedSource = null; showForm = true">+ Add Source</button>
+      <button class="btn dark" (click)="goToStory()">Story Feed</button>
+    </div>
+  </div>
+
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search sources..." />
+    <button class="btn blue">Search</button>
+  </div>
 
  <div class="list">
     @for (source of sources; track source.id) {
@@ -24,7 +38,7 @@
         </div>
 
         <div class="col actions">
-          <button class="btn blue">Update Source</button>
+          <button class="btn blue" (click)="updateSource(source)">Update Source</button>
           <button class="btn red" (click)="deleteSource(source.id)">Delete</button>
         </div>
 
@@ -54,5 +68,15 @@
     [disabled]="page === totalPages">
     Next
   </button>
-
 </div>
+
+  @if (showForm) {
+    <app-form
+      [source]="selectedSource"
+      (saved)="onSourceAdded()"
+      (close)="showForm = false">
+    </app-form>
+  }
+
+
+  

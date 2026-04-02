@@ -19,4 +19,10 @@ export interface SourceResponse {
 export interface CompanyModel {
   id: number;
   name: string;
+ 
+}
+
+export interface CompanyResponse {
+  count: number;
+  data: CompanyModel[];
 }

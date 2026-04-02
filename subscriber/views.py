@@ -69,7 +69,7 @@ def login_view(request):
 
                 # return redirect("source:add")
                 
-                return redirect("source:new")
+                return redirect("/sources/new/")
                 
 
             else:

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { CompanyModel, SourceResponse } from '../models/source';
+import { CompanyModel, CompanyResponse, SourceResponse } from '../models/source';
 
 @Injectable({
   providedIn: 'root',
@@ -14,14 +14,26 @@ export class SourceService {
   constructor(private http: HttpClient) {}
 
  
-getCompanies(): Observable<CompanyModel> {
-    return this.http.get<CompanyModel>(this.companyUrl, {
-      withCredentials: true
-    });
+//  getCompanies() : Observable<any> {
+//   return this.http.get('http://127.0.0.1:8000/company/drf/list/', {
+//     withCredentials: true   
+//   });
+// }
+
+ getCompanies() {
+  return this.http.get(this.companyUrl, {
+    withCredentials: true   
+  });
+}
+
+  getSources(page: number = 1): Observable<SourceResponse> {
+    return this.http.get<SourceResponse>(`${this.apiUrl}?page=${page}`);
   }
 
-  getSources(): Observable<SourceResponse> {
-    return this.http.get<SourceResponse>(this.apiUrl);
+  addSource(data: any) {
+    return this.http.post(this.apiUrl, data, {
+      withCredentials: true
+    });
   }
 
  deleteSource(id: number) {
@@ -30,6 +42,12 @@ getCompanies(): Observable<CompanyModel> {
     });
   }
 
+ updateSource(id: number, data: any) {
+    return this.http.put(`${this.apiUrl}${id}/`, data, {
+      withCredentials: true
+    });
+  }
 }
+
 
 
