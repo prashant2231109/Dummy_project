@@ -1,0 +1,38 @@
+<div class="modal">
+  <form (ngSubmit)="submitForm()">
+  <h3>{{ formData.id ? 'Update Source' : 'Add Source' }}</h3>
+
+  
+
+    <input
+      type="text"
+      [(ngModel)]="formData.name"
+      name="name"
+      placeholder="Name"
+    />
+
+    <input
+      type="text"
+      [(ngModel)]="formData.url"
+      name="url"
+      placeholder="URL"
+    />
+
+    <select multiple [(ngModel)]="formData.tagged_companies" name="companies">
+      @for (company of companies; track company.id) {
+        <option [value]="company.id">{{ company.name }}</option>
+      }
+    </select>
+
+    <div class="actions">
+      <button type="submit" class="btn green" >{{ formData.id ? 'Update' : 'Save' }}</button>
+      <button type="button" class="btn red" (click)="closeForm()">
+        Cancel
+      </button>
+    </div>
+
+  </form>
+</div>
+
+
+

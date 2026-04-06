@@ -1,0 +1,82 @@
+<div class="header">
+    <h2>All Sources</h2>
+
+    <div class="actions">
+      <button class="btn green" (click)="selectedSource = null; showForm = true">+ Add Source</button>
+      <button class="btn dark" (click)="goToStory()">Story Feed</button>
+    </div>
+  </div>
+
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search sources..." />
+    <button class="btn blue">Search</button>
+  </div>
+
+ <div class="list">
+    @for (source of sources; track source.id) {
+      <div class="list-row">
+
+      
+        <div class="col id">{{ source.id }}</div>
+
+      
+        <div class="col name">
+          <a href="#">{{ source.name }}</a>
+        </div>
+
+     
+        <div class="col url">
+          <a [href]="source.url" target="_blank">Visit URL</a>
+        </div>
+
+      
+        <div class="col tags">
+          @for (company of source.tagged_companies_data; track company.id) {
+            <span class="tag">{{ company.name }}</span>
+          }
+        </div>
+
+        <div class="col actions">
+          <button class="btn blue" (click)="updateSource(source)">Update Source</button>
+          <button class="btn red" (click)="deleteSource(source.id)">Delete</button>
+        </div>
+
+      </div>
+    }
+
+    @if (sources.length === 0) {
+      <p>No sources found</p>
+    }
+  </div>
+
+
+  <div class="pagination">
+
+  <button 
+    class="btn"
+    (click)="prevPage()" 
+    [disabled]="page === 1">
+    Prev
+  </button>
+
+  <span>Page {{ page }} of {{ totalPages }}</span>
+
+  <button 
+    class="btn"
+    (click)="nextPage()" 
+    [disabled]="page === totalPages">
+    Next
+  </button>
+</div>
+
+  @if (showForm) {
+    <app-form
+      [source]="selectedSource"
+      (saved)="onSourceAdded()"
+      (close)="showForm = false">
+    </app-form>
+  }
+
+
+  

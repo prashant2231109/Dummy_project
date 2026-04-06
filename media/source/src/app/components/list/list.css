@@ -1,0 +1,121 @@
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* SEARCH */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* LIST TABLE STYLE */
+.list {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.list-row {
+  display: grid;
+  grid-template-columns: 60px 2fr 2fr 2fr 180px;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.header-row {
+  background: #f5f6f8;
+  font-weight: 600;
+}
+
+/* COLUMNS */
+.col {
+  display: flex;
+  align-items: center;
+}
+
+.col.name a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.col.url a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* TAGS */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background: #e6f0ff;
+  color: #0056b3;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* ACTION BUTTONS */
+.col.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+/* BUTTON STYLES */
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn.green { background: #28a745; color: white; }
+.btn.blue { background: #007bff; color: white; }
+.btn.red { background: #dc3545; color: white; }
+.btn.dark { background: #343a40; color: white; }
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* EMPTY STATE */
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: gray;
+}

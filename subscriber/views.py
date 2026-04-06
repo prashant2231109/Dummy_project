@@ -63,9 +63,14 @@ def login_view(request):
                     .exists()
                 ):
 
-                    return redirect("story:list")
+                    # return redirect("story:list")
 
-                return redirect("source:add")
+                    return redirect("/stories/new/")
+
+                # return redirect("source:add")
+                
+                return redirect("/sources/new/")
+                
 
             else:
                 messages.error(request, "Invalid username or password")

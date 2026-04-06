@@ -1,0 +1,99 @@
+<div class="top-bar">
+  <button class="btn primary">All Stories</button>
+
+  <button class="btn primary center-btn"
+    (click)="selectedStory = null; showForm = true">
+    + Add Story
+  </button>
+
+  <button class="btn primary" (click)="goToSource()">
+    Back To Source
+  </button>
+</div>
+
+
+<!-- 🔍 Search -->
+<div class="search-bar">
+  <input
+    type="text"
+    [(ngModel)]="query"
+    (ngModelChange)="onSearchChange($event)"
+    placeholder="Search stories..."
+  />
+</div>
+
+<!-- 🧩 Form -->
+@if(showForm){
+  <app-form
+    [story]="selectedStory"
+    (saved)="onStoryAdded()"
+    (close)="closeForm()">
+  </app-form>
+}
+
+<!-- 📋 List -->
+<div class="list">
+
+  @for (story of stories; track story.id) {
+    <div class="list-row">
+
+      <!-- ID -->
+      <div class="col id">{{ story.id }}</div>
+
+      <!-- Title -->
+      <div class="col name">
+        {{ story.title }}
+      </div>
+
+      <!-- URL -->
+      <div class="col url">
+        <a [href]="story.url" target="_blank">
+          Visit URL
+        </a>
+      </div>
+
+      <!-- Actions -->
+      <div class="col actions">
+        <button 
+          class="btn red" 
+          (click)="deleteStory(story.id)"
+          >
+          Delete
+        </button>
+
+        <button 
+          class="btn gray" 
+          (click)="editStory(story)">
+          Update
+        </button>
+      </div>
+
+    </div>
+  }
+
+  @if (stories.length === 0) {
+    <p>No stories found</p>
+  }
+
+</div>
+
+<!-- 📄 Pagination -->
+<div class="pagination">
+
+  <button 
+    class="btn"
+    (click)="prevPage()" 
+    [disabled]="page === 1">
+    Prev
+  </button>
+
+  <span>Page {{ page }} of {{ totalPages }}</span>
+
+  <button 
+    class="btn"
+    (click)="nextPage()" 
+    [disabled]="page === totalPages">
+    Next
+  </button>
+
+</div>

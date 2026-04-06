@@ -22,7 +22,7 @@ class SourceViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
 
         serializer.save(
-            company=self.request.user.subscriber.company_id,
+            company=self.request.user.subscriber.company,
             created_by=self.request.user,
             updated_by=self.request.user,
         )
