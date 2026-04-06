@@ -26,9 +26,14 @@ export class SourceService {
   });
 }
 
-  getSources(page: number = 1): Observable<SourceResponse> {
-    return this.http.get<SourceResponse>(`${this.apiUrl}?page=${page}`);
-  }
+ getSources(page: number = 1, query: string = ''): Observable<SourceResponse> {
+  return this.http.get<SourceResponse>(
+    `${this.apiUrl}?page=${page}&search=${query}`
+  );
+}
+
+ 
+
 
   addSource(data: any) {
     return this.http.post(this.apiUrl, data, {
@@ -48,6 +53,9 @@ export class SourceService {
     });
   }
 }
+
+
+
 
 
 

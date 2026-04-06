@@ -1,5 +1,4 @@
-{
-  "name": "story",
+ { "name": "source",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -17,6 +16,8 @@
     "@angular/forms": "^21.2.0",
     "@angular/platform-browser": "^21.2.0",
     "@angular/router": "^21.2.0",
+    "bootstrap": "^5.3.8",
+    "ngx-bootstrap": "^21.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -30,3 +31,4 @@
     "vitest": "^4.0.8"
   }
 }
+

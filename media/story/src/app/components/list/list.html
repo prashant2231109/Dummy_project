@@ -12,14 +12,14 @@
 </div>
 
 
-<!-- 🔍 Search -->
-<div class="search-bar">
-  <input
-    type="text"
+ <div class="search-bar">
+  <input 
+    type="text" 
+    placeholder="Search sources..." 
     [(ngModel)]="query"
-    (ngModelChange)="onSearchChange($event)"
-    placeholder="Search stories..."
+    (keyup.enter)="onSearch()"
   />
+  <button class="btn blue" (click)="onSearch()">Search</button>
 </div>
 
 <!-- 🧩 Form -->
@@ -77,23 +77,36 @@
 
 </div>
 
-<!-- 📄 Pagination -->
-<div class="pagination">
 
-  <button 
-    class="btn"
-    (click)="prevPage()" 
-    [disabled]="page === 1">
-    Prev
-  </button>
-
-  <span>Page {{ page }} of {{ totalPages }}</span>
-
-  <button 
-    class="btn"
-    (click)="nextPage()" 
-    [disabled]="page === totalPages">
-    Next
-  </button>
-
+<!-- <div class="row"> 
+  <div class="col-xs-12 col-12">
+    <pagination 
+      [totalItems]="totalItems"
+      [(ngModel)]="currentPage"
+      (pageChanged)="pageChanged($event)">
+    </pagination>
+  </div>
 </div>
+
+<pre class="card card-block card-header mb-3">
+  Page changed to: {{ page }}
+</pre> -->
+
+<div class="row">
+  <div class="col-xs-12 col-12">
+    <pagination 
+      [totalItems]="totalItems"
+      [(ngModel)]="page"
+      (pageChanged)="pageChanged($event)"
+      [itemsPerPage]="10"
+  [maxSize]="5"
+  [boundaryLinks]="true"
+  previousText="Previous"
+  nextText="Next">
+    </pagination>
+  </div>
+</div>
+
+<pre class="card card-block card-header mb-3">
+  Page changed to: {{ page }}
+</pre>

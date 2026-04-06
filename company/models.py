@@ -29,7 +29,7 @@ class Company(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
-
+        ordering = ["name"]
         indexes = [
             GinIndex(
                 fields=["name"],

@@ -26,20 +26,13 @@ constructor(private http: HttpClient) {}
 }
   
 
-  getStories(page: number, query: string) {
+ getStories(page: number = 1, query: string = ''): Observable<any> {
+  return this.http.get<any>(
+    `${this.apiUrl}?page=${page}&search=${query}`,
+    { withCredentials: true }
+  );
+}
 
-    let params = new HttpParams()
-      .set('page', page.toString());
-
-    if (query) {
-      params = params.set('search', query);
-    }
-
-    return this.http.get(this.apiUrl, { 
-      params,
-      withCredentials: true 
-    });
-  }
 
    addStory(data: any) {
     return this.http.post(this.apiUrl, data, {

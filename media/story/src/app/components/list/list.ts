@@ -69,24 +69,27 @@ import { StoryService } from '../../services/story';
 import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
 import { Form } from '../form/form';
 import { Router } from '@angular/router';
+import { PageChangedEvent } from 'ngx-bootstrap/pagination';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [FormsModule, CommonModule, Form],
+  imports: [FormsModule, CommonModule, Form, PaginationModule],
   templateUrl: './list.html',
   styleUrl: './list.css',
 })
 export class ListComponent implements OnInit {
 
-  page: number = 1;
-  totalPages: number = 1;
-  query: string = '';
-  stories: any[] = [];
-  showForm: boolean = false;
-  selectedStory: any = null;
+totalItems: number = 0;
+currentPage : number = 1;
+page: number = 1;
+query: string = '';
+stories: any[] = [];
+showForm: boolean = false;
+selectedStory: any = null;
 
-  private searchSubject = new Subject<string>();
+
 
   constructor(
     private storyService: StoryService,
@@ -94,38 +97,31 @@ export class ListComponent implements OnInit {
     private router: Router
   ) {}
   
-
   ngOnInit() {
 
-   
-    this.searchSubject.pipe(
-      debounceTime(400),
-      distinctUntilChanged()
-    ).subscribe((value) => {
-      this.page = 1;
-      this.loadStories();
-    });
-
-  
     this.loadStories();
   }
 
  
-  onSearchChange(value: string) {
-    this.searchSubject.next(value);
-  }
+
 
   loadStories() {
     this.storyService.getStories(this.page, this.query).subscribe({
       next: (data: any) => {
         this.stories = data.results;
-        this.totalPages = Math.ceil(data.count / 10);
+        // this.totalPages = Math.ceil(data.count / 10);
+         this.totalItems = data.count;
 
         this.cdr.markForCheck();
       },
       error: (err:any) => console.error(err)
     });
   }
+  onSearch(): void {
+   this.currentPage = 1;
+  this.page = 1;
+  this.loadStories();
+}
 
 
    onStoryAdded() {
@@ -157,18 +153,10 @@ export class ListComponent implements OnInit {
     this.selectedStory = null;
   }
 
-  nextPage() {
-    if (this.page < this.totalPages) {
-      this.page++;
-      this.loadStories();
-    }
-  }
+  pageChanged(event: PageChangedEvent): void {
+    this.page = event.page;
 
-  prevPage() {
-    if (this.page > 1) {
-      this.page--;
-      this.loadStories();
-    }
+    this.loadStories(); 
   }
 
 
@@ -176,4 +164,5 @@ goToSource() {
   // this.router.navigate(['/source']);
     window.location.href = '/sources/new/';
 }
+
 }

@@ -1,6 +1,7 @@
 from rest_framework import permissions, viewsets
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.exceptions import NotAuthenticated
+from rest_framework import filters
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 
@@ -13,6 +14,8 @@ from source.serializers import SourceSerializer
 class SourceViewSet(viewsets.ModelViewSet):
     serializer_class = SourceSerializer
     permission_classes = [IsAuthenticated, IsOwner]
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name', 'url'] 
 
     def get_queryset(self):
         # import ipdb; ipdb.set_trace()

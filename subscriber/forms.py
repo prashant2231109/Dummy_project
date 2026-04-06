@@ -12,15 +12,21 @@ class SignupForm(forms.Form):
     Form for user registration that are linked to a company.
     """
 
-    username = forms.CharField(max_length=100,required=True,
+    username = forms.CharField(
+        max_length=100,
+        required=True,
         error_messages={"required": "Username is required"},
     )
-    password = forms.CharField(max_length=100,required=True,
+    password = forms.CharField(
+        max_length=100,
+        required=True,
         widget=forms.PasswordInput(
             attrs={"class": "form-control", "placeholder": "Password"}
         ),
     )
-    confirm_password = forms.CharField(max_length=100,required=True,
+    confirm_password = forms.CharField(
+        max_length=100,
+        required=True,
         widget=forms.PasswordInput(
             attrs={"class": "form-control", "placeholder": "Confirm Password"}
         ),
@@ -29,7 +35,7 @@ class SignupForm(forms.Form):
     last_name = forms.CharField(max_length=100, required=True)
     email = forms.EmailField(max_length=100, required=True)
     company = forms.ModelChoiceField(
-        queryset=Company.objects.none(),
+        queryset=Company.objects.all(),
         widget=autocomplete.ModelSelect2(url="company:search"),
     )
 

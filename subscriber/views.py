@@ -66,6 +66,7 @@ def login_view(request):
                     # return redirect("story:list")
 
                     return redirect("/stories/new/")
+                   
 
                 # return redirect("source:add")
                 
