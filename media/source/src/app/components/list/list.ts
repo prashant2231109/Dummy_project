@@ -18,15 +18,11 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class ListComponents implements OnInit {
 
-
 modalRef?: BsModalRef;  
 sources : SourceModel[] = [];
-// totalPages : number = 1;
 totalItems: number = 0;
 currentPage: number = 1;
 page: number = 1;
-// showForm: boolean = false;
-// selectedSource: any = null;
 
 query: string = '';
 
@@ -48,7 +44,6 @@ getSources(): void{
   this.SourceService.getSources(this.page, this.query ).subscribe({
     next :(data) =>{
       console.log("this is data" ,data);
-
       this.sources = data.results || [];
       this.totalItems = data.count;
       console.log('total pages' , this.totalItems);
@@ -93,7 +88,6 @@ openForm(source: SourceModel | null = null) {
 
 onSourceAdded() {
     this.getSources();     
-    // this.showForm = false; 
   }
 
 
@@ -106,10 +100,4 @@ pageChanged(event: PageChangedEvent): void {
 goToStory() {
     window.location.href = '/stories/new/';
   }
-
-
-// updateSource(source:any) {
-//     this.showForm = true;
-//     this.selectedSource = source;
-// }
 }

@@ -2,9 +2,9 @@
   <button class="btn primary">All Stories</button>
 
   <button class="btn primary center-btn"
-    (click)="selectedStory = null; showForm = true">
-    + Add Story
-  </button>
+  (click)="openForm()">
+  + Add Story
+</button>
 
   <button class="btn primary" (click)="goToSource()">
     Back To Source
@@ -22,30 +22,18 @@
   <button class="btn blue" (click)="onSearch()">Search</button>
 </div>
 
-<!-- 🧩 Form -->
-@if(showForm){
-  <app-form
-    [story]="selectedStory"
-    (saved)="onStoryAdded()"
-    (close)="closeForm()">
-  </app-form>
-}
 
-<!-- 📋 List -->
 <div class="list">
 
   @for (story of stories; track story.id) {
     <div class="list-row">
 
-      <!-- ID -->
       <div class="col id">{{ story.id }}</div>
 
-      <!-- Title -->
       <div class="col name">
         {{ story.title }}
       </div>
 
-      <!-- URL -->
       <div class="col url">
         <a [href]="story.url" target="_blank">
           Visit URL
@@ -58,48 +46,21 @@
           }
         </div>
 
-      <!-- Actions -->
-    @if (story.is_owner || story.is_staff) {
+  @if (story.is_owner || story.is_staff) {
   <div class="col actions">
-    
-    <button 
-      class="btn red" 
-      (click)="deleteStory(story.id)">
-      Delete
-    </button>
-
-    <button 
-      class="btn gray" 
-      (click)="editStory(story)">
-      Update
-    </button>
-
-  </div>
+    <button class="btn red" (click)="deleteStory(story.id)"> Delete </button>
+  <button class="btn gray" (click)="openForm(story)">Update</button>
+</div>
 }
+</div>
 
-    </div>
-  }
+}
 
   @if (stories.length === 0) {
     <p>No stories found</p>
   }
 
 </div>
-
-
-<!-- <div class="row"> 
-  <div class="col-xs-12 col-12">
-    <pagination 
-      [totalItems]="totalItems"
-      [(ngModel)]="currentPage"
-      (pageChanged)="pageChanged($event)">
-    </pagination>
-  </div>
-</div>
-
-<pre class="card card-block card-header mb-3">
-  Page changed to: {{ page }}
-</pre> -->
 
 <div class="row">
   <div class="col-xs-12 col-12">

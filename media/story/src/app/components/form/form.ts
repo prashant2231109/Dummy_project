@@ -4,10 +4,8 @@ import { CommonModule } from '@angular/common';
 
 import { StoryService } from '../../services/story';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
-
-
-
-
+import { BsModalRef } from 'ngx-bootstrap/modal';
+import { CompanyModel, SourceModel } from '../../models/story.model';
 
 @Component({
   selector: 'app-form',
@@ -31,19 +29,18 @@ export class Form implements OnInit {
     tagged_companies: [] as number[]
   };
   
-  companies: any[] = [];
-  sources: any[] = [];
+companies: CompanyModel[] = [];
+sources: SourceModel[] = [];
 
 companyQuery = '';
-selectedCompanies: any[] = [];
+selectedCompanies: CompanyModel[] = [];
 
   constructor(
     private storyService: StoryService,
-  
-    // private sourceService: SourceService
+    public bsModalRef: BsModalRef 
   ) {}
 
-  ngOnInit(): void {
+ngOnInit(): void {
     this.loadCompanies();
     this.loadSources();
     if (this.story) {
@@ -59,7 +56,7 @@ selectedCompanies: any[] = [];
     }
   }
 
-  loadCompanies() {
+loadCompanies() {
     this.storyService.getCompanies().subscribe({
       next: (res: any) => {
         this.companies = res.data ? res.data : res;
@@ -68,7 +65,7 @@ selectedCompanies: any[] = [];
     });
   }
 
-  loadSources() {
+loadSources() {
     this.storyService.getSources().subscribe({
       next: (res: any) => {
         this.sources = res.results ? res.results : (res.data ? res.data : res);
@@ -78,35 +75,28 @@ selectedCompanies: any[] = [];
     });
   }
 
+submitForm() {
+  const request = this.formData.id
+    ? this.storyService.updateStory(this.formData.id, this.formData)
+    : this.storyService.addStory(this.formData);
 
-  submitForm() {
-    if (this.formData.id) {
-     
-      this.storyService.updateStory(this.formData.id, this.formData).subscribe({
-        next: () => this.saved.emit(),
-        error: (err: any) => {
-          console.error(err);
-          alert('Failed to update story');
-        }
-      });
-    } else {
-      
-      this.storyService.addStory(this.formData).subscribe({
-        next: () => this.saved.emit(),
-        error: (err: any) => {
-          console.error(err);
-          alert('Failed to add story');
-        }
-      });
+  request.subscribe({
+    next: () => {
+      this.saved.emit();       
+      this.bsModalRef.hide();   
+    },
+    error: (err: any) => {
+      console.error(err);
+      alert('Failed to save story');
     }
-  }
+  });
+}
 
-  closeForm() {
-    this.close.emit();
-  }
+closeForm() {
+  this.bsModalRef.hide(); 
+}
 
-
-  onCompanySelected(company: any) {
+onCompanySelected(company: any) {
   
   const exists = this.selectedCompanies.some(c => c.id === company.id);
   if (!exists) {
@@ -125,5 +115,6 @@ removeCompany(companyId: number) {
 private syncTaggedCompanies() {
   this.formData.tagged_companies = this.selectedCompanies.map(c => c.id);
 }
+
 }
 

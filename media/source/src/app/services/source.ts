@@ -9,10 +9,10 @@ import { catchError} from 'rxjs/operators';
 })
 export class SourceService {
 
-  private apiUrl = 'http://127.0.0.1:8000/source/drf/viewsets/';
-  private companyUrl = 'http://127.0.0.1:8000/company/drf/list/';
+private apiUrl = 'http://127.0.0.1:8000/source/drf/viewsets/';
+private companyUrl = 'http://127.0.0.1:8000/company/drf/list/';
 
-  constructor(private http: HttpClient) {}
+constructor(private http: HttpClient) {}
 
 
 private handleError<T>(operation = 'operation', result?: T, rethrow: boolean = false) {
@@ -28,10 +28,10 @@ private handleError<T>(operation = 'operation', result?: T, rethrow: boolean = f
 }
 
 
-getCompanies() {
-  return this.http.get<CompanyModel[]>(this.companyUrl, {
-    
-  });
+getCompanies(): Observable<CompanyModel[]> {
+  return this.http.get<CompanyModel[]>(this.companyUrl).pipe(
+    catchError(this.handleError<CompanyModel[]>('getCompanies', []))
+  );
 }
 
 getSources(page: number = 1, query: string = ''): Observable<SourceResponse> {
@@ -52,7 +52,7 @@ getSources(page: number = 1, query: string = ''): Observable<SourceResponse> {
   return this.http.post<SourceModel>(this.apiUrl, data, {
    
   }).pipe(
-    catchError(this.handleError<any>('addSource', null , true)
+    catchError(this.handleError<SourceModel>('addSource', undefined  , true)
   ));
 }
 
@@ -67,7 +67,7 @@ deleteSource(id: number): Observable<void> {
 updateSource(id: number, data: SourceInput): Observable<SourceModel> {
   return this.http.put<SourceModel>(`${this.apiUrl}${id}/`, data, {
   }).pipe(
-    catchError(this.handleError<any>('updateSource', null , true))
+    catchError(this.handleError<SourceModel>('updateSource', undefined  , true))
   );
 }
 }

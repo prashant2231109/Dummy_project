@@ -1,67 +1,54 @@
-<div class="modal">
+
+<div class="modal-header">
+  <h4 class="modal-title">
+    {{ formData.id ? 'Update Story' : 'Add Story' }}
+  </h4>
+  <button type="button" class="btn-close" (click)="closeForm()"></button>
+</div>
+
+<div class="modal-body">
   <form (ngSubmit)="submitForm()">
 
-    <h3>{{ formData.id ? 'Update Story' : 'Add Story' }}</h3>
+    <input type="text" [(ngModel)]="formData.title" name="title" placeholder="Title" class="form-control mb-2"/>
 
-    
-    <input type="text" [(ngModel)]="formData.title" name="title" 
-    placeholder="Title"/>
+    <input type="text" [(ngModel)]="formData.url" name="url" placeholder="URL" class="form-control mb-2"/>
 
-   
-    <input type="text" [(ngModel)]="formData.url" name="url"
-      placeholder="URL"
-    />
-
-   
-    <select [(ngModel)]="formData.source" name="source">
-      <option [ngValue]="null" disabled selected>Select a source</option>
+    <select [(ngModel)]="formData.source" name="source" class="form-control mb-2">
+      <option [ngValue]="null" disabled>Select a source</option>
       @for (source of sources; track source.id) {
         <option [ngValue]="source.id">{{ source.name }}</option>
       }
     </select>
 
+    <input type="text" [(ngModel)]="formData.body_text" name="body_text" placeholder="Body Text" class="form-control mb-2"/>
+
+  
     <input
       type="text"
-      [(ngModel)]="formData.body_text"
-      name="body_text"
-      placeholder="Body Text"
+      name="companySearch"
+      [(ngModel)]="companyQuery"
+      [typeahead]="companies"
+      typeaheadOptionField="name"
+      (typeaheadOnSelect)="onCompanySelected($event.item)"
+      placeholder="Search company..."
+      class="form-control mb-2"
     />
-
-    <!-- Tagged Companies -->
-    <!-- <select multiple [(ngModel)]="formData.tagged_companies" name="tagged_companies">
-      @for (company of companies; track company.id) {
-        <option [value]="company.id">{{ company.name }}</option>
+    
+    <div class="mb-2">
+      @for (c of selectedCompanies; track c.id) {
+        <span class="badge bg-primary me-1">
+          {{ c.name }}
+          <button type="button" (click)="removeCompany(c.id)">x</button>
+        </span>
       }
-    </select> -->
+    </div>
 
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-success">
+        {{ formData.id ? 'Update' : 'Save' }}
+      </button>
 
-  <input
-  type="text"
-  name="companySearch"
-  [(ngModel)]="companyQuery"
-  [typeahead]="companies"
-  typeaheadOptionField="name"
-  (typeaheadOnSelect)="onCompanySelected($event.item)"
-  placeholder="Search company..."
-  class="form-control"
-/>
-
-<div class="selected-list">
-  @for (c of selectedCompanies; track c.id) {
-    <span class="chip">
-      {{ c.name }}
-      <button type="button" (click)="removeCompany(c.id)">x</button>
-    </span>
-  }
-</div>
-
-    <div class="actions">
-      <button type="submit" class="btn green">{{ formData.id ? 'Update' : 'Save' }}</button>
-
-      <button
-        type="button"
-        class="btn red"
-        (click)="closeForm()">
+      <button type="button" class="btn btn-danger" (click)="closeForm()">
         Cancel
       </button>
     </div>
