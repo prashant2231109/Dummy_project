@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class StoryService {
 
 apiUrl = 'http://127.0.0.1:8000/story/drf/viewsets/';
+private SourceUrl = 'http://127.0.0.1:8000/source/drf/viewsets/';
 
 constructor(private http: HttpClient) {}
 
@@ -44,7 +45,7 @@ constructor(private http: HttpClient) {}
 
   updateStory(id: number, data: any) {
   return this.http.patch(
-    `${this.apiUrl}${id}/`,   // DRF expects /id/
+    `${this.apiUrl}${id}/`,   
     data,
     { withCredentials: true }
   );
@@ -55,4 +56,15 @@ deleteStory(id: number) {
       withCredentials: true
     });
   }
+
+
+getSources(page: number = 1, query: string = ''): Observable<any> {
+  return this.http.get<any>(
+    `${this.SourceUrl}?page=${page}&search=${query}`,
+    { withCredentials: true }
+  );
+}  
 }
+
+
+

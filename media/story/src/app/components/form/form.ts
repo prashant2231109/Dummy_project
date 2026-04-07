@@ -7,6 +7,8 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 
 
 
+
+
 @Component({
   selector: 'app-form',
   standalone: true,
@@ -24,11 +26,11 @@ export class Form implements OnInit {
     id: null,
     title: '',
     url: '',
-    source: 1,
+    source: null,
     body_text: '',
     tagged_companies: [] as number[]
   };
-
+  
   companies: any[] = [];
   sources: any[] = [];
 
@@ -43,6 +45,7 @@ selectedCompanies: any[] = [];
 
   ngOnInit(): void {
     this.loadCompanies();
+    this.loadSources();
     if (this.story) {
       this.formData = {
         id: this.story.id,
@@ -65,10 +68,20 @@ selectedCompanies: any[] = [];
     });
   }
 
+  loadSources() {
+    this.storyService.getSources().subscribe({
+      next: (res: any) => {
+        this.sources = res.results ? res.results : (res.data ? res.data : res);
+        console.log('Sources loaded:', this.sources)
+      },
+      error: (err: any) => console.error('Error loading sources:', err)
+    });
+  }
+
 
   submitForm() {
     if (this.formData.id) {
-      // Update existing story
+     
       this.storyService.updateStory(this.formData.id, this.formData).subscribe({
         next: () => this.saved.emit(),
         error: (err: any) => {
@@ -77,7 +90,7 @@ selectedCompanies: any[] = [];
         }
       });
     } else {
-      // Create new story
+      
       this.storyService.addStory(this.formData).subscribe({
         next: () => this.saved.emit(),
         error: (err: any) => {

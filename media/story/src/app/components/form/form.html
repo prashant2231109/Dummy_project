@@ -14,8 +14,9 @@
 
    
     <select [(ngModel)]="formData.source" name="source">
+      <option [ngValue]="null" disabled selected>Select a source</option>
       @for (source of sources; track source.id) {
-        <option [value]="source.id">{{ source.name }}</option>
+        <option [ngValue]="source.id">{{ source.name }}</option>
       }
     </select>
 

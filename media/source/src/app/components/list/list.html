@@ -41,11 +41,14 @@
             <span class="tag">{{ company.name }}</span>
           }
         </div>
-
-        <div class="col actions">
+        @if (source.is_owner ||  source.is_staff){
+          <div class="col actions">
           <button class="btn blue" (click)="updateSource(source)">Update Source</button>
           <button class="btn red" (click)="deleteSource(source.id)">Delete</button>
         </div>
+
+        }
+        
 
       </div>
     }

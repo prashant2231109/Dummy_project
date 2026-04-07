@@ -6,6 +6,8 @@ export interface SourceModel {
     id: number;
     name: string;
   }[];
+  is_owner: boolean
+  is_staff:boolean
 }
 
 

@@ -19,8 +19,12 @@ class SourceViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         # import ipdb; ipdb.set_trace()
-
-        return Source.objects.all()
+        company = self.request.user.subscriber.company
+        return (
+            Source.objects.select_related("company","created_by", "updated_by")
+            .prefetch_related("tagged_companies")
+            .filter(company=company)
+        )
 
     def perform_create(self, serializer):
 
@@ -33,3 +37,7 @@ class SourceViewSet(viewsets.ModelViewSet):
     def perform_update(self, serializer):
 
         serializer.save(updated_by=self.request.user)
+
+
+    def get_serializer_context(self):
+        return {"request": self.request}     

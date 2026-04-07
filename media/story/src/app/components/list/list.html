@@ -52,21 +52,30 @@
         </a>
       </div>
 
-      <!-- Actions -->
-      <div class="col actions">
-        <button 
-          class="btn red" 
-          (click)="deleteStory(story.id)"
-          >
-          Delete
-        </button>
+        <div class="col tags">
+          @for (company of story.tagged_companies_data; track company.id) {
+            <span class="tag">{{ company.name }}</span>
+          }
+        </div>
 
-        <button 
-          class="btn gray" 
-          (click)="editStory(story)">
-          Update
-        </button>
-      </div>
+      <!-- Actions -->
+    @if (story.is_owner || story.is_staff) {
+  <div class="col actions">
+    
+    <button 
+      class="btn red" 
+      (click)="deleteStory(story.id)">
+      Delete
+    </button>
+
+    <button 
+      class="btn gray" 
+      (click)="editStory(story)">
+      Update
+    </button>
+
+  </div>
+}
 
     </div>
   }
