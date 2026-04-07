@@ -12,9 +12,6 @@ export const routes: Routes = [
     redirectTo: 'sources/new',
     pathMatch: 'full'
   },
-  //  {
-  //   path: 'sources/list',
-  //   component: ListComponents
-  // },
+
 
 ];

@@ -10,6 +10,12 @@ export interface SourceModel {
   is_staff:boolean
 }
 
+export interface SourceInput {
+  id?: number | null;
+  name: string;
+  url: string;
+  tagged_companies: number[];
+}
 
 export interface SourceResponse {
   count: number;
@@ -21,7 +27,6 @@ export interface SourceResponse {
 export interface CompanyModel {
   id: number;
   name: string;
- 
 }
 
 export interface CompanyResponse {

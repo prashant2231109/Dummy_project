@@ -26,17 +26,15 @@ export class FormComponent implements OnInit {
     tagged_companies: [] as number[]
   };
 
-companies : any[] = [];
+companies : CompanyModel[] = [];
 
 
 companyQuery = '';
-selectedCompanies: any[] = [];
+selectedCompanies: CompanyModel[] = [];
 
+constructor(private sourceService : SourceService , private router:Router){}
 
-
-  constructor(private sourceService : SourceService , private router:Router){}
-
-  ngOnInit(): void {
+ngOnInit(): void {
   this.loadCompanies();
 
   if (this.source) {
@@ -55,19 +53,17 @@ selectedCompanies: any[] = [];
 }
 
 
-
 loadCompanies(): void {
   this.sourceService.getCompanies().subscribe({
     next: (res: any) => {
       this.companies = res.data ? res.data : res;
+      console.log("here is the company" ,this.companies)
 
     },
     error: (err) => console.error('Error fetching companies:', err),
   });
 }
 
-
-  
 
   submitForm() {
 
@@ -98,7 +94,7 @@ closeForm() {
   }
 
 
-onCompanySelected(company: any) {
+onCompanySelected(company: CompanyModel) {
   
   const exists = this.selectedCompanies.some(c => c.id === company.id);
   if (!exists) {

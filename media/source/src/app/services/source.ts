@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { CompanyModel, CompanyResponse, SourceResponse } from '../models/source';
+import { Observable, of, throwError } from 'rxjs';
+import { CompanyModel,SourceModel, SourceResponse, SourceInput } from '../models/source';
+import { catchError} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -13,45 +14,62 @@ export class SourceService {
 
   constructor(private http: HttpClient) {}
 
- 
-//  getCompanies() : Observable<any> {
-//   return this.http.get('http://127.0.0.1:8000/company/drf/list/', {
-//     withCredentials: true   
-//   });
-// }
 
- getCompanies() {
-  return this.http.get(this.companyUrl, {
-    withCredentials: true   
+private handleError<T>(operation = 'operation', result?: T, rethrow: boolean = false) {
+  return (error: any): Observable<T> => {
+    const errorMsg = error?.error?.message || error?.message || 'Unknown error';
+    console.error(`${operation} failed: ${errorMsg}`);
+
+   if (rethrow) {
+      return throwError(() => error.error);
+    }
+    return of(result as T);
+  };
+}
+
+
+getCompanies() {
+  return this.http.get<CompanyModel[]>(this.companyUrl, {
+    
   });
 }
 
- getSources(page: number = 1, query: string = ''): Observable<SourceResponse> {
+getSources(page: number = 1, query: string = ''): Observable<SourceResponse> {
   return this.http.get<SourceResponse>(
     `${this.apiUrl}?page=${page}&search=${query}`
+  ).pipe(
+    catchError(this.handleError<SourceResponse>('getSources', {
+      count: 0,
+      next: null,
+      previous: null,
+      results: []
+    }))
   );
 }
 
- 
 
+ addSource(data: SourceInput): Observable<SourceModel> {
+  return this.http.post<SourceModel>(this.apiUrl, data, {
+   
+  }).pipe(
+    catchError(this.handleError<any>('addSource', null , true)
+  ));
+}
 
-  addSource(data: any) {
-    return this.http.post(this.apiUrl, data, {
-      withCredentials: true
-    });
-  }
+deleteSource(id: number): Observable<void> {
+  return this.http.delete(`${this.apiUrl}${id}/`, {
 
- deleteSource(id: number) {
-    return this.http.delete(`${this.apiUrl}${id}/`, {
-      withCredentials: true
-    });
-  }
+  }).pipe(
+    catchError(this.handleError<any>('deleteSource'))
+  );
+}
 
- updateSource(id: number, data: any) {
-    return this.http.put(`${this.apiUrl}${id}/`, data, {
-      withCredentials: true
-    });
-  }
+updateSource(id: number, data: SourceInput): Observable<SourceModel> {
+  return this.http.put<SourceModel>(`${this.apiUrl}${id}/`, data, {
+  }).pipe(
+    catchError(this.handleError<any>('updateSource', null , true))
+  );
+}
 }
 
 

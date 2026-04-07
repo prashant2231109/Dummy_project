@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient ,HttpParams} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,14 +11,6 @@ apiUrl = 'http://127.0.0.1:8000/story/drf/viewsets/';
 private SourceUrl = 'http://127.0.0.1:8000/source/drf/viewsets/';
 
 constructor(private http: HttpClient) {}
-
-// getStories(page: number = 1, query: string = ''): Observable<any> {
-//     return this.http.get(
-//       `${this.apiUrl}?page=${page}&q=${query}`,
-//       { withCredentials: true }
-//     );
-//   }
-// }
 
  getCompanies() {
   return this.http.get('http://127.0.0.1:8000/company/drf/list/', {
