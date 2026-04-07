@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 import { Observable, debounceTime, switchMap, map } from 'rxjs';
+import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-form',
@@ -16,7 +17,7 @@ import { Observable, debounceTime, switchMap, map } from 'rxjs';
 export class FormComponent implements OnInit {
 
 @Output() saved = new EventEmitter<void>();
-@Output() close = new EventEmitter<void>();
+// @Output() close = new EventEmitter<void>();
 @Input() source: any = null;
 
  formData = {
@@ -32,7 +33,9 @@ companies : CompanyModel[] = [];
 companyQuery = '';
 selectedCompanies: CompanyModel[] = [];
 
-constructor(private sourceService : SourceService , private router:Router){}
+constructor(private sourceService : SourceService , 
+private router:Router,
+public bsModalRef: BsModalRef ){}
 
 ngOnInit(): void {
   this.loadCompanies();
@@ -65,34 +68,67 @@ loadCompanies(): void {
 }
 
 
-  submitForm() {
+//   submitForm() {
 
-    if (this.formData.id) {
-      this.sourceService.updateSource(this.formData.id, this.formData).subscribe({
-        next: () => this.saved.emit(),
-        error: (err: any) => {
-          console.error(err);
-          alert('Failed to update story');
-        }
-      });
-    } else{
-    this.sourceService.addSource(this.formData).subscribe({
-      next: (res: any) => {
-        this.saved.emit(); 
+//     if (this.formData.id) {
+//       this.sourceService.updateSource(this.formData.id, this.formData).subscribe({
+//         next: () => this.saved.emit(),
+//         error: (err: any) => {
+//           console.error(err);
+//           alert('Failed to update story');
+//         }
+//       });
+//     } else{
+//     this.sourceService.addSource(this.formData).subscribe({
+//       next: (res: any) => {
+//         this.saved.emit(); 
         
+//       },
+//       error: (err: any) => {
+//         console.error(' Error adding source:', err)
+//       }
+//     });
+//   }
+
+// }
+
+
+submitForm() {
+  if (this.formData.id) {
+    this.sourceService.updateSource(this.formData.id, this.formData).subscribe({
+      next: () => {
+        this.saved.emit();
+        this.bsModalRef.hide();   // ✅ close modal
       },
       error: (err: any) => {
-        console.error(' Error adding source:', err)
+        console.error(err);
+        alert('Failed to update story');
+      }
+    });
+  } else {
+    this.sourceService.addSource(this.formData).subscribe({
+      next: () => {
+        this.saved.emit();
+        this.bsModalRef.hide();   // ✅ close modal
+      },
+      error: (err: any) => {
+        console.error('Error adding source:', err);
       }
     });
   }
-
 }
 
-closeForm() {
-    this.close.emit();
-  }
 
+
+
+// closeForm() {
+//     this.close.emit();
+//   }
+
+
+closeForm() {
+  this.bsModalRef.hide();  
+}
 
 onCompanySelected(company: CompanyModel) {
   

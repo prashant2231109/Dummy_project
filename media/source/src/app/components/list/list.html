@@ -2,7 +2,8 @@
     <h2>All Sources</h2>
 
     <div class="actions">
-      <button class="btn green" (click)="selectedSource = null; showForm = true">+ Add Source</button>
+      <!-- <button class="btn green" (click)="selectedSource = null; showForm = true">+ Add Source</button> -->
+       <button (click)="openForm()">+ Add Source</button>
       <button class="btn dark" (click)="goToStory()">Story Feed</button>
     </div>
   </div>
@@ -43,7 +44,8 @@
         </div>
         @if (source.is_owner ||  source.is_staff){
           <div class="col actions">
-          <button class="btn blue" (click)="updateSource(source)">Update Source</button>
+          <!-- <button class="btn blue" (click)="updateSource(source)">Update Source</button> -->
+           <button (click)="openForm(source)">Update Source</button>
           <button class="btn red" (click)="deleteSource(source.id)">Delete</button>
         </div>
 
@@ -77,15 +79,16 @@
 </pre>
 
 
-  @if (showForm) {
+  <!-- @if (showForm) {
     <app-form
       [source]="selectedSource"
       (saved)="onSourceAdded()"
       (close)="showForm = false">
     </app-form>
-  }
+  } -->
 
-  
+
+
 
 
   
