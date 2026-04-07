@@ -70,6 +70,6 @@ def delete_source(request, source_id):
 
 
 def new_source(request):
-    return render(request, "source/index.html", context={})
+    return render(request, "source/new_index.html", context={})
 
 

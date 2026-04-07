@@ -101,4 +101,4 @@ class SourceAutocomplete(autocomplete.Select2QuerySetView):
 
 
 def new_stories(request):
-    return render(request, "story/index.html", context={})
+    return render(request, "story/new_index.html", context={})

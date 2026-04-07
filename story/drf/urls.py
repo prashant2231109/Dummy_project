@@ -8,8 +8,6 @@ router = DefaultRouter()
 router.register(r"viewsets", viewsets.StoryViewSet, basename="viewset")
 
 
-app_name = "story"
-
 urlpatterns = [
     path("apiview/", apiviews.StoryAPIView.as_view(), name="api-list"),
     path("apiview/<int:source_id>/", apiviews.StoryAPIView.as_view(), 

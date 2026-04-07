@@ -3,13 +3,14 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { StoryService } from '../../services/story';
-
-
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { BsModalRef } from 'ngx-bootstrap/modal';
+import { CompanyModel, SourceModel } from '../../models/story.model';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TypeaheadModule],
   templateUrl: './form.html',
   styleUrls: ['./form.css']
 })
@@ -23,22 +24,25 @@ export class Form implements OnInit {
     id: null,
     title: '',
     url: '',
-    source: 1,
+    source: null,
     body_text: '',
-    tagged_companies: []
+    tagged_companies: [] as number[]
   };
+  
+companies: CompanyModel[] = [];
+sources: SourceModel[] = [];
 
-  companies: any[] = [];
-  sources: any[] = [];
+companyQuery = '';
+selectedCompanies: CompanyModel[] = [];
 
   constructor(
     private storyService: StoryService,
-  
-    // private sourceService: SourceService
+    public bsModalRef: BsModalRef 
   ) {}
 
-  ngOnInit(): void {
+ngOnInit(): void {
     this.loadCompanies();
+    this.loadSources();
     if (this.story) {
       this.formData = {
         id: this.story.id,
@@ -48,10 +52,11 @@ export class Form implements OnInit {
         body_text: this.story.body_text,
         tagged_companies: this.story.tagged_companies || []
       };
+       this.selectedCompanies = this.story.tagged_companies_data || [];
     }
   }
 
-  loadCompanies() {
+loadCompanies() {
     this.storyService.getCompanies().subscribe({
       next: (res: any) => {
         this.companies = res.data ? res.data : res;
@@ -60,31 +65,56 @@ export class Form implements OnInit {
     });
   }
 
+loadSources() {
+    this.storyService.getSources().subscribe({
+      next: (res: any) => {
+        this.sources = res.results ? res.results : (res.data ? res.data : res);
+        console.log('Sources loaded:', this.sources)
+      },
+      error: (err: any) => console.error('Error loading sources:', err)
+    });
+  }
 
-  submitForm() {
-    if (this.formData.id) {
-      // Update existing story
-      this.storyService.updateStory(this.formData.id, this.formData).subscribe({
-        next: () => this.saved.emit(),
-        error: (err: any) => {
-          console.error(err);
-          alert('Failed to update story');
-        }
-      });
-    } else {
-      // Create new story
-      this.storyService.addStory(this.formData).subscribe({
-        next: () => this.saved.emit(),
-        error: (err: any) => {
-          console.error(err);
-          alert('Failed to add story');
-        }
-      });
+submitForm() {
+  const request = this.formData.id
+    ? this.storyService.updateStory(this.formData.id, this.formData)
+    : this.storyService.addStory(this.formData);
+
+  request.subscribe({
+    next: () => {
+      this.saved.emit();       
+      this.bsModalRef.hide();   
+    },
+    error: (err: any) => {
+      console.error(err);
+      alert('Failed to save story');
     }
+  });
+}
+
+closeForm() {
+  this.bsModalRef.hide(); 
+}
+
+onCompanySelected(company: any) {
+  
+  const exists = this.selectedCompanies.some(c => c.id === company.id);
+  if (!exists) {
+    this.selectedCompanies.push(company);
+    this.syncTaggedCompanies();
   }
 
-  closeForm() {
-    this.close.emit();
-  }
+  this.companyQuery = '';
+}
+
+removeCompany(companyId: number) {
+  this.selectedCompanies = this.selectedCompanies.filter(c => c.id !== companyId);
+  this.syncTaggedCompanies();
+}
+
+private syncTaggedCompanies() {
+  this.formData.tagged_companies = this.selectedCompanies.map(c => c.id);
+}
+
 }
 

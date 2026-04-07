@@ -1,65 +1,80 @@
 import { Injectable } from '@angular/core';
-import { HttpClient ,HttpParams} from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable, of, throwError } from 'rxjs';
+import { SourceModel, StoryModel, StoryResponse , CompanyModel, StoryInput} from '../models/story.model';
+import { catchError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StoryService {
 
-apiUrl = 'http://127.0.0.1:8000/story/drf/viewsets/';
+private apiUrl = 'http://127.0.0.1:8000/story/drf/viewsets/';
+private SourceUrl = 'http://127.0.0.1:8000/source/drf/viewsets/';
+private companyUrl = 'http://127.0.0.1:8000/company/drf/list/';
+
 
 constructor(private http: HttpClient) {}
 
-// getStories(page: number = 1, query: string = ''): Observable<any> {
-//     return this.http.get(
-//       `${this.apiUrl}?page=${page}&q=${query}`,
-//       { withCredentials: true }
-//     );
-//   }
-// }
+private handleError<T>(operation = 'operation', result?: T, rethrow: boolean = false) {
+  return (error: any): Observable<T> => {
+    const errorMsg = error?.error?.message || error?.message || 'Unknown error';
+    console.error(`${operation} failed: ${errorMsg}`);
 
- getCompanies() {
-  return this.http.get('http://127.0.0.1:8000/company/drf/list/', {
-    withCredentials: true   
-  });
+   if (rethrow) {
+      return throwError(() => error.error);
+    }
+    return of(result as T);
+  };
 }
+
+
+getCompanies() :Observable<CompanyModel[]> {
+    return this.http.get<CompanyModel[]>(this.companyUrl)
+      .pipe(catchError(this.handleError('getCompanies', [])));
+  }
   
 
-  getStories(page: number, query: string) {
-
-    let params = new HttpParams()
-      .set('page', page.toString());
-
-    if (query) {
-      params = params.set('search', query);
-    }
-
-    return this.http.get(this.apiUrl, { 
-      params,
-      withCredentials: true 
-    });
+getStories(page = 1, query = '') :Observable<StoryResponse>{
+    return this.http.get<StoryResponse>(`${this.apiUrl}?page=${page}&search=${query}`)
+      .pipe(catchError(this.handleError('getStories', {
+        count: 0, 
+        next: null, 
+        previous: null,
+        results: [] }))
+      );
   }
 
-   addStory(data: any) {
-    return this.http.post(this.apiUrl, data, {
-      withCredentials: true
-    });
+
+addStory(data: StoryInput): Observable<StoryModel> {
+    return this.http.post<StoryModel>(this.apiUrl, data)
+      .pipe(catchError(this.handleError<StoryModel>('addStory', undefined as any, true))
+    );
   }
 
 
 
-  updateStory(id: number, data: any) {
-  return this.http.patch(
-    `${this.apiUrl}${id}/`,   // DRF expects /id/
-    data,
-    { withCredentials: true }
-  );
+updateStory(id: number, data: Partial<StoryInput>): Observable<StoryModel> {
+    return this.http.patch<StoryModel>(`${this.apiUrl}${id}/`, data)
+      .pipe(catchError(this.handleError<StoryModel>('updateStory', undefined as any, true))
+    );
+  }
+
+deleteStory(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}${id}/`)
+      .pipe(catchError(this.handleError<void>('deleteStory'))
+    );
+  }
+
+
+getSources(page = 1, query = ''): Observable<SourceModel> {
+    return this.http.get<SourceModel>(`${this.SourceUrl}?page=${page}&search=${query}`)
+      .pipe(catchError(this.handleError<any>('getSources', { 
+        count: 0, results: [] })
+      ));
+  }
 }
 
-deleteStory(id: number) {
-    return this.http.delete(`${this.apiUrl}${id}/`, {
-      withCredentials: true
-    });
-  }
-}
+
+
+

@@ -1,4 +1,5 @@
 from rest_framework import permissions, viewsets
+from rest_framework import filters
 
 
 from permissions import IsOwner
@@ -10,6 +11,8 @@ from story.serializers import StorySerializer
 class StoryViewSet(viewsets.ModelViewSet):
     serializer_class = StorySerializer
     permission_classes = [permissions.IsAuthenticated, IsOwner]
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title', 'body_text']
 
 
     
