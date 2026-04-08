@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { StoryService } from '../../services/story';
-import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { TypeaheadModule , TypeaheadMatch } from 'ngx-bootstrap/typeahead';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { CompanyModel, SourceModel } from '../../models/story.model';
 
@@ -28,14 +28,16 @@ export class Form implements OnInit {
     body_text: '',
     tagged_companies: [] as number[]
   };
-  
+
+
 companies: CompanyModel[] = [];
 sources: SourceModel[] = [];
+
 
 companyQuery = '';
 selectedCompanies: CompanyModel[] = [];
 
-  constructor(
+constructor(
     private storyService: StoryService,
     public bsModalRef: BsModalRef 
   ) {}
@@ -53,6 +55,7 @@ ngOnInit(): void {
         tagged_companies: this.story.tagged_companies || []
       };
        this.selectedCompanies = this.story.tagged_companies_data || [];
+       
     }
   }
 
@@ -74,6 +77,9 @@ loadSources() {
       error: (err: any) => console.error('Error loading sources:', err)
     });
   }
+
+
+
 
 submitForm() {
   const request = this.formData.id
@@ -112,9 +118,11 @@ removeCompany(companyId: number) {
   this.syncTaggedCompanies();
 }
 
-private syncTaggedCompanies() {
+syncTaggedCompanies() {
   this.formData.tagged_companies = this.selectedCompanies.map(c => c.id);
 }
+
+
 
 }
 

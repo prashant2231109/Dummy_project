@@ -5,12 +5,14 @@ import { provideHttpClient, withInterceptors, withXsrfConfiguration } from '@ang
 import { routes } from './app.routes';
 import { authInterceptor } from './interceptors/auth-interceptor';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     importProvidersFrom(ModalModule.forRoot()),
+    importProvidersFrom(TypeaheadModule.forRoot()),
     provideHttpClient(
       withXsrfConfiguration({
         cookieName: 'csrftoken',

@@ -68,37 +68,12 @@ loadCompanies(): void {
 }
 
 
-//   submitForm() {
-
-//     if (this.formData.id) {
-//       this.sourceService.updateSource(this.formData.id, this.formData).subscribe({
-//         next: () => this.saved.emit(),
-//         error: (err: any) => {
-//           console.error(err);
-//           alert('Failed to update story');
-//         }
-//       });
-//     } else{
-//     this.sourceService.addSource(this.formData).subscribe({
-//       next: (res: any) => {
-//         this.saved.emit(); 
-        
-//       },
-//       error: (err: any) => {
-//         console.error(' Error adding source:', err)
-//       }
-//     });
-//   }
-
-// }
-
-
 submitForm() {
   if (this.formData.id) {
     this.sourceService.updateSource(this.formData.id, this.formData).subscribe({
       next: () => {
         this.saved.emit();
-        this.bsModalRef.hide();   // ✅ close modal
+        this.bsModalRef.hide();  
       },
       error: (err: any) => {
         console.error(err);
@@ -109,7 +84,7 @@ submitForm() {
     this.sourceService.addSource(this.formData).subscribe({
       next: () => {
         this.saved.emit();
-        this.bsModalRef.hide();   // ✅ close modal
+        this.bsModalRef.hide();  
       },
       error: (err: any) => {
         console.error('Error adding source:', err);
@@ -118,12 +93,6 @@ submitForm() {
   }
 }
 
-
-
-
-// closeForm() {
-//     this.close.emit();
-//   }
 
 
 closeForm() {

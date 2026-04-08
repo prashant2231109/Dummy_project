@@ -40,7 +40,7 @@ this.loadStories();
 
 }
 
-openForm(story: any = null) {
+openForm(story: StoryModel | null = null) {
   this.modalRef = this.modalService.show(Form, {
     initialState: {
       story: story
@@ -76,7 +76,6 @@ onSearch(): void {
 
 onStoryAdded() {
     this.loadStories();   
-   
 }
 
 
