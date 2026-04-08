@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { StoryService } from '../../services/story';
-import { TypeaheadModule , TypeaheadMatch } from 'ngx-bootstrap/typeahead';
+import { TypeaheadModule, TypeaheadMatch } from 'ngx-bootstrap/typeahead';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { CompanyModel, SourceModel } from '../../models/story.model';
 
@@ -32,7 +32,8 @@ export class Form implements OnInit {
 
 companies: CompanyModel[] = [];
 sources: SourceModel[] = [];
-
+selectedSource: SourceModel | null = null;
+sourceSearchText: string = '';
 
 companyQuery = '';
 selectedCompanies: CompanyModel[] = [];
@@ -55,7 +56,10 @@ ngOnInit(): void {
         tagged_companies: this.story.tagged_companies || []
       };
        this.selectedCompanies = this.story.tagged_companies_data || [];
-       
+       if (this.story.source_data) {
+         this.selectedSource = this.story.source_data;
+         this.sourceSearchText = this.story.source_data.name;
+       }
     }
   }
 
@@ -78,8 +82,11 @@ loadSources() {
     });
   }
 
-
-
+onSourceSelect(event: TypeaheadMatch) {
+  const selected = event.item;
+  this.formData.source = selected.id;
+  this.sourceSearchText = selected.name; 
+}
 
 submitForm() {
   const request = this.formData.id

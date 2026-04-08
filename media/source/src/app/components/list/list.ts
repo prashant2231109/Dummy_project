@@ -79,7 +79,7 @@ openForm(source: SourceModel | null = null) {
     });
 
     this.modalRef.content.saved.subscribe(() => {
-      this.onSourceAdded();   // refresh list
+      this.onSourceAdded();   
       this.modalRef?.hide();
     });
   }

@@ -13,12 +13,19 @@
 
     <input type="text" [(ngModel)]="formData.url" name="url" placeholder="URL" class="form-control mb-2"/>
 
-    <select [(ngModel)]="formData.source" name="source" class="form-control mb-2">
-      <option [ngValue]="null" disabled>Select a source</option>
-      @for (source of sources; track source.id) {
-        <option [ngValue]="source.id">{{ source.name }}</option>
-      }
-    </select>
+
+
+    <input
+      type="text"
+      name="sourceSearch"
+      [(ngModel)]="sourceSearchText"
+      [typeahead]="sources"
+      typeaheadOptionField="name"
+      [typeaheadMinLength]="0"
+      (typeaheadOnSelect)="onSourceSelect($event)"
+      class="form-control mb-2"
+      placeholder="Search source..."
+    />
 
 
 
